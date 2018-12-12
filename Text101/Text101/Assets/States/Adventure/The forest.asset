@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3adefdca596a674cbdd93b4401da5e1, type: 3}
+  m_Name: The forest
+  m_EditorClassIdentifier: 
+  storyText: "You keep backing away slowly and finally you reach the forest with trees
+    as cover. You slip behind a tree and the dragon loses its focus of you.\r\n\r\n\r\n1.
+    Stay behind the tree. It won't find me here.\r\n\r\n2. Move from tree to tree
+    towards the castle, but take the risk of being seen by the dragon."
+  nextStates:
+  - {fileID: 11400000, guid: 9af59a5315ec2c745a935fbeff0d3942, type: 2}
+  - {fileID: 11400000, guid: d5b10d0e68408d74db36e834b50c1aad, type: 2}

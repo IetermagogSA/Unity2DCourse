@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3adefdca596a674cbdd93b4401da5e1, type: 3}
+  m_Name: A deer or two
+  m_EditorClassIdentifier: 
+  storyText: "You set off with blazing speed as you chase after the deer. You come
+    to a sudden halt as the deer is swept away from your vision and lifted into the
+    sky to meet with a pair of hungry teeth that snaps its body in two.\r\n\r\nYour
+    eyes meet with the dragon's and for a moment both of you freeze as you calculate
+    your next move...\r\n\r\n1. Slowly back away towards the woods.\r\n\r\n2. Draw
+    your knife to take on this beast!\r\n\r\n3. Fire an arrow to warn the dragon that
+    you are a serious force to be reckoned with."
+  nextStates:
+  - {fileID: 11400000, guid: 9834389f3be17e44c9ba62a251ba2734, type: 2}
+  - {fileID: 11400000, guid: c911d14d0613da644918e46adc6219c2, type: 2}
+  - {fileID: 11400000, guid: 09d1b495ea888d746b92495880231cab, type: 2}

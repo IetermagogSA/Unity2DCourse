@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3adefdca596a674cbdd93b4401da5e1, type: 3}
+  m_Name: Living on the edge
+  m_EditorClassIdentifier: 
+  storyText: "You slowly unsheathe your knife, trying not to taunt the monster before
+    you are ready to take it head-on. The sun shimmers off the blade's edge, disturbs
+    the stare of the dragon and it rushes its open jaws towards you.\r\n\r\n1. Dodge
+    the attack\r\n\r\n2. Cut like your life depends on it. I mean, it does..."
+  nextStates:
+  - {fileID: 11400000, guid: c6c6ffe9ea66f4147bb32ad7b7838197, type: 2}
+  - {fileID: 11400000, guid: 9af59a5315ec2c745a935fbeff0d3942, type: 2}

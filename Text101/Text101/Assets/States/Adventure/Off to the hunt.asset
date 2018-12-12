@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3adefdca596a674cbdd93b4401da5e1, type: 3}
+  m_Name: Off to the hunt
+  m_EditorClassIdentifier: 
+  storyText: 'You see a deer grazing from a bush before you. As you slowly creep up
+    on it, the deer is startled by a loud growling noise and runs off into the distance.
+
+
+    Do you:
+
+    1. Run after the deer. It''s not getting away that easy!
+
+    2. Check out what made that growling noise...'
+  nextStates:
+  - {fileID: 11400000, guid: e0037e902425c0c48ab42a5d22ce6ce3, type: 2}
+  - {fileID: 11400000, guid: 7c61a323a21528141991eff6f0f5b3df, type: 2}

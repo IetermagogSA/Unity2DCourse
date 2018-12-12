@@ -1,0 +1,2 @@
+H:\Programming\Projects\Unity2D\NumberWizard\NumberWizard\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
+H:\Programming\Projects\Unity2D\NumberWizard\NumberWizard\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache

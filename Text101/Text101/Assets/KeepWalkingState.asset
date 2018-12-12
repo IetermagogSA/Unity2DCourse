@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3adefdca596a674cbdd93b4401da5e1, type: 3}
+  m_Name: KeepWalkingState
+  m_EditorClassIdentifier: 
+  storyText: 'You see a deer grazing from a bush before you. As you slowly creep up
+    on it, the deer is strartled by a loud growling noise and runs off into the distance.
+
+
+    Do you:
+
+    1. Run after the deer. It''s not getting away that easy!
+
+    2. Check out what made that growling noise...'
+  nextStates:
+  - {fileID: 11400000, guid: 3b55791e2590980408b3b503a1b6df23, type: 2}
+  - {fileID: 11400000, guid: fab59a8b511bb3240b2efa3ecdfc7219, type: 2}

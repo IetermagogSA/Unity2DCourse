@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3adefdca596a674cbdd93b4401da5e1, type: 3}
+  m_Name: The start of our journey
+  m_EditorClassIdentifier: 
+  storyText: "It's a lovely summer's day and our hero decided to spend the day honing
+    his skills and hunt for some food.\r\n\r\nAs you stroll into the forest, a young
+    boy comes running past you while he screams that there is a dragon coming this
+    way.\r\n\r\nWhat do you do?\n\n1. Join the screaming boy and warn everyone on
+    your way back to castle\n2. Keep walking. Who's afraid of a dragon anyway?\n"
+  nextStates:
+  - {fileID: 11400000, guid: 3b55791e2590980408b3b503a1b6df23, type: 2}
+  - {fileID: 11400000, guid: 35c22609a8e250b41966ddb344d6ddac, type: 2}

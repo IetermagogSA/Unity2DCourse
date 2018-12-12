@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3adefdca596a674cbdd93b4401da5e1, type: 3}
+  m_Name: Off to the castle
+  m_EditorClassIdentifier: 
+  storyText: "Its useless to fight and you set off running as fast as you can towards
+    the castle gates. The dragon chases you with all its blazing fury, but only manages
+    to match your pace and stay behind you. You cross the bridge and a guard behind
+    the gate raises the draw-bridge.\r\n\r\nYou escape by the hair on your chin, but
+    only as a running coward.\n\nWould you like to try again?\n1. Yes\n2. No"
+  nextStates:
+  - {fileID: 11400000, guid: fab59a8b511bb3240b2efa3ecdfc7219, type: 2}
+  - {fileID: 11400000, guid: 86cd6b33b7d5fd0439fd441e09ff08c8, type: 2}

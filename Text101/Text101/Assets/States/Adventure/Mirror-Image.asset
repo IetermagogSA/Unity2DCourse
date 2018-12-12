@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3adefdca596a674cbdd93b4401da5e1, type: 3}
+  m_Name: Mirror-Image
+  m_EditorClassIdentifier: 
+  storyText: "You realize that it would be stupid to fight in an open area and decide
+    to back away into the woods where there is more cover.\r\n\r\nWith every step
+    you take towards the woods, the dragon takes a step forward as if its mirroring
+    your movements.\r\n\r\n1. Keep doing what you're doing until you reach the woods.\r\n\r\n2.
+    Turn around and start running to the woods."
+  nextStates:
+  - {fileID: 11400000, guid: 8e154555f39dc5441845d056eb7f4988, type: 2}
+  - {fileID: 11400000, guid: 8e154555f39dc5441845d056eb7f4988, type: 2}
