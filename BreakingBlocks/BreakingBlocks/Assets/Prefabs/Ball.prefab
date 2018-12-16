@@ -88,7 +88,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7d1ea5d88d903f74289d9a8834650720, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -188,6 +188,11 @@ MonoBehaviour:
   paddle1: {fileID: 0}
   pushX: 2
   pushY: 15
+  ballSounds:
+  - {fileID: 8300000, guid: ed896229e960f4f4c85c71e49aa8ed18, type: 3}
+  - {fileID: 8300000, guid: 91049251db929cc4b85c0cade9c79f47, type: 3}
+  - {fileID: 8300000, guid: 29fccb3aaa9316e47b465af5d86d3c42, type: 3}
+  - {fileID: 8300000, guid: de4ffd8212784d94486aff1f6cf6ba4b, type: 3}
 --- !u!212 &212423281694249778
 SpriteRenderer:
   m_ObjectHideFlags: 1
