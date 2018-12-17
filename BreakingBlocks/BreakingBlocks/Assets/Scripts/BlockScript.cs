@@ -5,26 +5,50 @@ using UnityEngine;
 public class BlockScript : MonoBehaviour
 {
     [SerializeField] AudioClip blockBreakClip;
+    [SerializeField] GameObject blockBreakSparkle;
 
     LevelScript levelscript;
     GameStatusScript gameStatusScript;
     private void Start()
     {
+        CountBreakableBlocks();
+    }
+
+    private void CountBreakableBlocks()
+    {
         levelscript = FindObjectOfType<LevelScript>();
-        levelscript.CountBlocks();
-        gameStatusScript = FindObjectOfType<GameStatusScript>();
+        if (tag == "Breakable")
+        {
+            levelscript.CountBlocks();
+        }        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        DestroyBlock();
+        if (tag == "Breakable")
+        {
+            DestroyBlock();
+        }
     }
 
     private void DestroyBlock()
     {
-        AudioSource.PlayClipAtPoint(blockBreakClip, Camera.main.transform.position);
+        PlayAudioAndVFX();
         Destroy(gameObject);
         levelscript.DecreaseBlocks();
+        CalculateScore();
+    }
+
+    private void PlayAudioAndVFX()
+    {
+        AudioSource.PlayClipAtPoint(blockBreakClip, Camera.main.transform.position);
+        GameObject sparkle = Instantiate(blockBreakSparkle, transform.position, transform.rotation);
+        Destroy(sparkle, 2f);
+    }
+
+    private void CalculateScore()
+    {
+        gameStatusScript = FindObjectOfType<GameStatusScript>();
         gameStatusScript.increaseScore();
     }
 }

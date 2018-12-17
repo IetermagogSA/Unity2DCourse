@@ -17,7 +17,7 @@ public class GameStatusScript : MonoBehaviour
 		int gameStatusCount = FindObjectsOfType<GameStatusScript>().Length;
 		if(gameStatusCount > 1)
 		{
-            gameObject.SetActive(false);
+			gameObject.SetActive(false);
 			Destroy(gameObject);
 		}
 		else
@@ -26,13 +26,13 @@ public class GameStatusScript : MonoBehaviour
 		}
 	}
 
-    private void Start()
-    {
-        playerScoreText.text = playerScore.ToString();
-    }
+	private void Start()
+	{
+		playerScoreText.text = playerScore.ToString();
+	}
 
-    // Update is called once per frame
-    void Update ()
+	// Update is called once per frame
+	void Update ()
 	{
 		Time.timeScale = myTimeScale;
 	}
@@ -40,6 +40,11 @@ public class GameStatusScript : MonoBehaviour
 	public void increaseScore()
 	{
 		playerScore += pointsPerBlock;
-        playerScoreText.text = playerScore.ToString();
-    }
+		playerScoreText.text = playerScore.ToString();
+	}
+
+	public void DestroyGameStatus()
+	{
+        Destroy(gameObject);
+	}
 }
