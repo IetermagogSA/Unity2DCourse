@@ -11,6 +11,7 @@ public class GameStatusScript : MonoBehaviour
 	[SerializeField] int pointsPerBlock = 1;
 	[SerializeField] int playerScore = 0;
 	[SerializeField] TextMeshProUGUI playerScoreText;
+    [SerializeField] bool isAutoPlayOn;
 
 	private void Awake()
 	{
@@ -47,4 +48,9 @@ public class GameStatusScript : MonoBehaviour
 	{
         Destroy(gameObject);
 	}
+
+    public bool IsAutoPlayOn()
+    {
+        return isAutoPlayOn;
+    }
 }

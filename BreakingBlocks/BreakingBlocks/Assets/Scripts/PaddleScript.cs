@@ -9,15 +9,37 @@ public class PaddleScript : MonoBehaviour
 	[SerializeField] float maxX = 14f;
 	[SerializeField] float screenWidthInUnits = 16f;
 
-	// Update is called once per frame
-	void Update ()
+    // Reference variables
+    GameStatusScript gameScript;
+    BallScript ballScript;
+
+    private void Start()
+    {
+        gameScript = FindObjectOfType<GameStatusScript>();
+        ballScript = FindObjectOfType<BallScript>();
+    }
+
+    // Update is called once per frame
+    void Update ()
 	{
-		//Debug.Log(Input.mousePosition.x / Screen.width * screenWidthInUnits);
-		float mousePosInUnits = Input.mousePosition.x / Screen.width * screenWidthInUnits;
+		//float mousePosInUnits = Input.mousePosition.x / Screen.width * screenWidthInUnits;
 		Vector2 paddlePos = new Vector2(transform.position.x, transform.position.y);
 
-		paddlePos.x = Mathf.Clamp(mousePosInUnits, minX, maxX);
+		paddlePos.x = Mathf.Clamp(GetXPos(), minX, maxX);
 
 		transform.position = paddlePos;
 	}
+
+    private float GetXPos()
+    {
+        if(gameScript.isActiveAndEnabled)
+        {
+            return ballScript.transform.position.x;
+        }
+        else
+        {
+           return Input.mousePosition.x / Screen.width * screenWidthInUnits;
+        }
+
+    }
 }
