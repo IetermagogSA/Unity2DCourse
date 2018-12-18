@@ -1,14 +1,20 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BlockScript : MonoBehaviour
 {
+    // Config params
     [SerializeField] AudioClip blockBreakClip;
     [SerializeField] GameObject blockBreakSparkle;
+    [SerializeField] int maxHits;
+    [SerializeField] Sprite[] blockSprites;
 
+    // State variables
     LevelScript levelscript;
     GameStatusScript gameStatusScript;
+    int timesHit;
     private void Start()
     {
         CountBreakableBlocks();
@@ -27,8 +33,26 @@ public class BlockScript : MonoBehaviour
     {
         if (tag == "Breakable")
         {
+            HandleHit();
+        }
+    }
+
+    private void HandleHit()
+    {
+        timesHit++;
+        if (timesHit >= maxHits)
+        {
             DestroyBlock();
         }
+        else
+        {
+            DisplayNextBlockSprite();
+        }
+    }
+
+    private void DisplayNextBlockSprite()
+    {
+        GetComponent<SpriteRenderer>().sprite = blockSprites[timesHit];
     }
 
     private void DestroyBlock()
