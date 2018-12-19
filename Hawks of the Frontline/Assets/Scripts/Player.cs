@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,6 +8,8 @@ public class Player : MonoBehaviour
     // Config Params
     [SerializeField] float playerSpeed = 15f;
     [SerializeField] float padding = 1f;
+    [SerializeField] GameObject laser;
+    [SerializeField] float projectileSpeed = 20f;
 
     // Reference Variables
     float xMin;
@@ -31,14 +34,23 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MovePlayer();        
+        MovePlayer();
+        ShootLaser();      
+    }
+
+    private void ShootLaser()
+    {
+        if(Input.GetButtonDown("Fire1"))
+        {
+            GameObject laserObject = Instantiate(laser, transform.position, Quaternion.identity) as GameObject;
+            laserObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, projectileSpeed);
+        }
     }
 
     private void MovePlayer()
     {
         // Move on the x-Axis
         var deltaX = Input.GetAxis("Horizontal") * Time.deltaTime * playerSpeed;
-        Debug.Log("DeltaX: " + deltaX + " xMin: " + xMin + " xMax: " + xMax);
         var newXPos = Mathf.Clamp(transform.position.x + deltaX, xMin, xMax);        
 
         // Move on the y-Axis
