@@ -176,7 +176,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &713795368406963568
 PrefabInstance:
@@ -297,7 +297,7 @@ PrefabInstance:
     - target: {fileID: 6423510370286609691, guid: 4257ad08228467740be55883b9c86598,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6423510370286609691, guid: 4257ad08228467740be55883b9c86598,
         type: 3}
@@ -585,6 +585,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 4524390997545916634, guid: ddd8062d29f2e4b49bb3dced2c594fc5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7751773273200436674, guid: ddd8062d29f2e4b49bb3dced2c594fc5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -639,6 +644,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6390161009308000147, guid: ddd8062d29f2e4b49bb3dced2c594fc5,
+        type: 3}
+      propertyPath: looping
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddd8062d29f2e4b49bb3dced2c594fc5, type: 3}
