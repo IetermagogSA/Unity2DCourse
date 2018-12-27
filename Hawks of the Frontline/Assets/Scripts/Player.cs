@@ -22,7 +22,6 @@ public class Player : MonoBehaviour
     [SerializeField] [Range(0f,1f)] float fireSoundVolume = 0.01f;
     [SerializeField] [Range(0f, 1f)] float deathSoundVolume = 1f;
 
-
     // Reference Variables
     float xMin;
     float xMax;
@@ -112,6 +111,7 @@ public class Player : MonoBehaviour
 
     private void Die()
     {
+        FindObjectOfType<Level>().LoadGameOver();
         AudioSource.PlayClipAtPoint(deathSound, Camera.main.transform.position, deathSoundVolume);
         Destroy(gameObject);
     }
