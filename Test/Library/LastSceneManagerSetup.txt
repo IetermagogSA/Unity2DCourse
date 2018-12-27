@@ -1,0 +1,4 @@
+sceneSetups:
+- path: C:/Users/Stefan/Downloads/Doctrina-Unity-Ocean-Water/Assets/world.unity
+  isLoaded: 1
+  isActive: 1

@@ -93,12 +93,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 004b5282c332ba4448004b24dd112bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 15
+  playerSpeed: 25
   padding: 0.5
   health: 200
   laser: {fileID: 4048088516858722338, guid: 18fd24afcc4560945a67e5ba421bbd3b, type: 3}
   projectileSpeed: 20
   projectileFiringDelay: 0.1
+  deathSound: {fileID: 8300000, guid: bc234787205d5f7439866626925856c8, type: 3}
+  fireSound: {fileID: 8300000, guid: 7c441f6d40c585b498fa4804fbbbaec4, type: 3}
+  fireSoundVolume: 0.01
+  deathSoundVolume: 1
 --- !u!60 &4600386408150004287
 PolygonCollider2D:
   m_ObjectHideFlags: 0

@@ -113,6 +113,12 @@ MonoBehaviour:
   enemyProjectile: {fileID: 4534532273601073726, guid: 6a51815288307b448a4ae0431567fd29,
     type: 3}
   projectileSpeed: 8
+  explosionVFX: {fileID: 4024720014693005341, guid: bc9fdb1da0648df449cf513f94caa6bc,
+    type: 3}
+  deathSound: {fileID: 8300000, guid: 86d4d176be7dd1f4ba4ea134a5dd7594, type: 3}
+  fireSound: {fileID: 8300000, guid: 3cb68364dc7bb144cb1d916d8c325387, type: 3}
+  fireSoundVolume: 0.02
+  deathSoundVolume: 0.4
 --- !u!60 &6812281933299460896
 PolygonCollider2D:
   m_ObjectHideFlags: 0
