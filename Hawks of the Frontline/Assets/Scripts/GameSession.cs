@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameSession : MonoBehaviour
 {
     int playerScore;
+    int playerHealth = 200;
     private void Awake()
     {
         SetupSingleton();

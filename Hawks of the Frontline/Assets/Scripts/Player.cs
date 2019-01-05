@@ -29,9 +29,11 @@ public class Player : MonoBehaviour
     float yMax;
     float volumeSFX;
     Coroutine firingCoroutine;
+    GameSession gameSession;
 
     private void Start()
     {
+        gameSession = FindObjectOfType<GameSession>();
         SetUpPlayerBoundaries();
     }
 
@@ -107,6 +109,11 @@ public class Player : MonoBehaviour
         {
             Die();
         }
+    }
+
+    public int GetHealth()
+    {
+        return health;
     }
 
     private void Die()
