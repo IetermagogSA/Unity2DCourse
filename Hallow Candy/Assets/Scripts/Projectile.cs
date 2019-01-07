@@ -21,7 +21,6 @@ public class Projectile : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             collision.gameObject.GetComponent<Health>().ReduceHealth(projectileDamage);
-            Debug.Log("Collision Detected");
             Destroy(gameObject);
         }
     }
