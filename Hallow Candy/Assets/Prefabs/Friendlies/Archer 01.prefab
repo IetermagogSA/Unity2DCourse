@@ -852,6 +852,7 @@ GameObject:
   - component: {fileID: 4749278382792260}
   - component: {fileID: 95674009901174722}
   - component: {fileID: 68853389}
+  - component: {fileID: 2926388168985188381}
   m_Layer: 0
   m_Name: Archer 01
   m_TagString: Untagged
@@ -908,6 +909,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 5936485050018904140, guid: 4390800528a81fb45bdc10b7604f59c7,
     type: 3}
+--- !u!114 &2926388168985188381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612459102471740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4380c39c0a8d0ce4b9699f085850335f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1637976549366936
 GameObject:
   m_ObjectHideFlags: 0
