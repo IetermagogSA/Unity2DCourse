@@ -5,6 +5,12 @@ using UnityEngine;
 public class DefenderSpawner : MonoBehaviour
 {
     Defender defender;
+    CandiesDisplay candiesDisplay;
+
+    private void Start()
+    {
+        candiesDisplay = FindObjectOfType<CandiesDisplay>();
+    }
 
     public void SetSelectedDefender(Defender selectedDefender)
     {
@@ -26,6 +32,7 @@ public class DefenderSpawner : MonoBehaviour
     {
         if (defender)
         {
+            candiesDisplay.DeceaseCandies(defender.GetDefenderCost());
             Instantiate(defender, GetSquareClicked(), transform.rotation);
             defender = null;
         }

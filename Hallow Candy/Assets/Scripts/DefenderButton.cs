@@ -6,19 +6,35 @@ public class DefenderButton : MonoBehaviour
 {
     [SerializeField] Defender defender;
 
+    CandiesDisplay candiesDisplay;
+
     SpriteRenderer sprite;
 
-    private void OnMouseDown()
-    {
-        FindObjectOfType<DefenderSpawner>().SetSelectedDefender(defender);
-    }
-    private void OnMouseOver()
+    private void Awake()
     {
         sprite = GetComponent<SpriteRenderer>();
-        sprite.color = Color.white;
+        candiesDisplay = FindObjectOfType<CandiesDisplay>();
+    }
+    private void Update()
+    {
+        if(candiesDisplay.GetCandiesToSpend() >= defender.GetDefenderCost())
+        {
+            sprite.color = Color.white;
+        }
+        else
+        {
+            sprite.color = Color.grey;
+        }
+    }
+    private void OnMouseDown()
+    {
+        if (candiesDisplay.GetCandiesToSpend() >= defender.GetDefenderCost())
+        {
+            FindObjectOfType<DefenderSpawner>().SetSelectedDefender(defender);
+        }
     }
 
-    private void OnMouseExit()
+    public void DeselectDefender()
     {
         sprite.color = Color.grey;
     }

@@ -35,4 +35,9 @@ public class CandiesDisplay : MonoBehaviour
             UpdateCandiesDisplay();
         }
     }
+
+    public int GetCandiesToSpend()
+    {
+        return candies;
+    }
 }
