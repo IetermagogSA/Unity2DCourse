@@ -10,11 +10,6 @@ public class DefenderSpawner : MonoBehaviour
     {
         defender = selectedDefender;
     }
-    private void OnMouseDown()
-    {
-        //Debug.Log("The mouse button has been clicked!");
-        SpawnDefender(GetSquareClicked());
-    }
 
     private Vector2 GetSquareClicked()
     {
@@ -27,8 +22,12 @@ public class DefenderSpawner : MonoBehaviour
         return worldPos;
     }
 
-    private void SpawnDefender(Vector2 spawnPoint)
+    public void SpawnDefender()
     {
-        Instantiate(defender, spawnPoint, transform.rotation);
+        if (defender)
+        {
+            Instantiate(defender, GetSquareClicked(), transform.rotation);
+            defender = null;
+        }
     }
 }

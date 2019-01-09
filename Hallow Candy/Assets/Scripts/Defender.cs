@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class Defender : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    //public void AddCandies(int amountToAdd)
+    //{
+    //    CandiesDisplay candiesDisplay = FindObjectOfType<CandiesDisplay>();
+    //    candiesDisplay.AddCandies(amountToAdd);
+    //}
 }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6880392620228268187}
   - component: {fileID: 6880392620228268186}
   - component: {fileID: 6880392620228268181}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6880392620228268180}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -70,4 +70,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7da1bfec9dbe27c46b9405a40c4aebb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defender: {fileID: 1612459102471740, guid: 0d79fc506aa58314d8cef757d5ae9035, type: 3}

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6295659707464149665}
   - component: {fileID: 6295659707464149678}
   - component: {fileID: 2767125412411881244}
+  - component: {fileID: 6167878793033967672}
   m_Layer: 0
   m_Name: Candy Holder
   m_TagString: Untagged
@@ -112,3 +113,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4380c39c0a8d0ce4b9699f085850335f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6167878793033967672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6295659707464149679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3995d0bce5d34f4cac12728c632b2ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currencyCandy: {fileID: 2092403896389915953, guid: e8a3f0c2f74b5594093c91f963303856,
+    type: 3}
+  candyValue: 10
+  idleTime: 3
