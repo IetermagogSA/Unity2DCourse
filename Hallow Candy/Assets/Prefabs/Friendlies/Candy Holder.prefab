@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 6295659707464149678}
   - component: {fileID: 2767125412411881244}
   - component: {fileID: 6167878793033967672}
-  m_Layer: 0
+  - component: {fileID: 2420607960313846608}
+  m_Layer: 10
   m_Name: Candy Holder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,6 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4380c39c0a8d0ce4b9699f085850335f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defenderCost: 50
 --- !u!114 &6167878793033967672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,5 +129,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currencyCandy: {fileID: 2092403896389915953, guid: e8a3f0c2f74b5594093c91f963303856,
     type: 3}
-  candyValue: 10
-  idleTime: 3
+--- !u!61 &2420607960313846608
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6295659707464149679}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.005156249, y: 0.35715395}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 1.0078125, y: 0.9824219}
+    newSize: {x: 5.1600003, y: 5.03}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.3481116, y: 1.3330327}
+  m_EdgeRadius: 0

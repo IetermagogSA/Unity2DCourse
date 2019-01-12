@@ -31,7 +31,8 @@ public class Health : MonoBehaviour
     IEnumerator Die()
     {
         collider.enabled = false;
-        animator.Play("Dying");
+        //animator.Play("Dying");
+        animator.SetBool("isDying", true);
         yield return new WaitForEndOfFrame(); // We need to wait for the next frame before the correct length of the clip will be returned
 
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);

@@ -13,21 +13,29 @@ public class ClickManager : MonoBehaviour
             Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
 
             int layerMask = 1 << 9;
-
             // Does the ray intersect any objects which are in the CurrencyCandy layer.
             if (Physics2D.Raycast(mousePos2D, Vector3.forward, Mathf.Infinity, layerMask))
             {
-                RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero,Mathf.Infinity, layerMask);
+                RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero, Mathf.Infinity, layerMask);
                 hit.collider.GetComponent<CurrencyCandy>().CandyClicked();
                 //FindObjectOfType<CurrencyCandy>().CandyClicked();
             }
-            else // Does the ray intersect any objects which are in the GameArea layer.
+            else
             {
-                layerMask = 1 << 8;
+                layerMask = 1 << 10;
+                // Does the ray intersect any objects which are in the Defender layer.
                 if (Physics2D.Raycast(mousePos2D, Vector3.forward, Mathf.Infinity, layerMask))
                 {
-                    RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero, Mathf.Infinity, layerMask);
-                    FindObjectOfType<DefenderSpawner>().SpawnDefender();
+                    // Do not allow spawning
+                }
+                else // Does the ray intersect any objects which are in the GameArea layer.
+                {
+                    layerMask = 1 << 8;
+                    if (Physics2D.Raycast(mousePos2D, Vector3.forward, Mathf.Infinity, layerMask))
+                    {
+                        RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero, Mathf.Infinity, layerMask);
+                        FindObjectOfType<DefenderSpawner>().SpawnDefender();
+                    }
                 }
             }
         }
