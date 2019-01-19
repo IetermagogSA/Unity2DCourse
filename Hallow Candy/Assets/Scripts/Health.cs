@@ -12,7 +12,11 @@ public class Health : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
-        collider = GetComponent<PolygonCollider2D>();
+
+        if (GetComponent<PolygonCollider2D>())
+        {
+            collider = GetComponent<PolygonCollider2D>();
+        }
     }
     public int GetHealth()
     {
@@ -30,7 +34,11 @@ public class Health : MonoBehaviour
 
     IEnumerator Die()
     {
-        collider.enabled = false;
+        if (collider)
+        {
+            collider.enabled = false;
+        }
+
         //animator.Play("Dying");
         animator.SetBool("isDying", true);
         yield return new WaitForEndOfFrame(); // We need to wait for the next frame before the correct length of the clip will be returned

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DefenderSpawner : MonoBehaviour
 {
+    [SerializeField] float offSet = 0.25f;
+
     Defender defender;
     CandiesDisplay candiesDisplay;
 
@@ -23,7 +25,7 @@ public class DefenderSpawner : MonoBehaviour
         Vector2 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
 
         worldPos.x = Mathf.RoundToInt(worldPos.x);
-        worldPos.y = Mathf.RoundToInt(worldPos.y) - 0.25f; // 0.25f is a small offset so that it looks good
+        worldPos.y = Mathf.RoundToInt(worldPos.y) - offSet; // 0.25f is a small offset so that it looks good
 
         return worldPos;
     }
