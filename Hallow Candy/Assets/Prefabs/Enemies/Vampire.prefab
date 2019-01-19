@@ -697,6 +697,7 @@ GameObject:
   - component: {fileID: 4682816430817933649}
   - component: {fileID: 3062172929378374101}
   - component: {fileID: 6799753331811258409}
+  - component: {fileID: 1394912244938991949}
   m_Layer: 0
   m_Name: Vampire
   m_TagString: Enemy
@@ -850,6 +851,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1394912244938991949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1542494739772580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7247b49bf37d554ca5b6ffe96dd6894, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1571154754751094
 GameObject:
   m_ObjectHideFlags: 0

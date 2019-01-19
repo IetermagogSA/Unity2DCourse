@@ -15,18 +15,12 @@ public class Attacker : MonoBehaviour
             GetComponent<Animator>().SetBool("isAttacking", false);
         }
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.tag == "Defender")
-        {
-            currentDefender = collision.transform.parent.gameObject as GameObject;
-            GetComponent<Animator>().SetBool("isAttacking", true);
-            Attack();
-        }
-    }
 
-    public void Attack()
+
+    public void Attack(GameObject defender)
     {
+        currentDefender = defender;
+
         if(currentDefender)
         {
             currentDefender.GetComponent<Health>().ReduceHealth(damageDealt);
