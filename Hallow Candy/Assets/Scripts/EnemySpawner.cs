@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] Enemy enemiesToSpawn;
+    [SerializeField] Enemy[] enemiesToSpawn;
     [SerializeField] float minSpawnRate = 10f;
     [SerializeField] float maxSpawnRate = 20f;
     [SerializeField] float offSet = 0.25f;
@@ -21,17 +21,18 @@ public class EnemySpawner : MonoBehaviour
 
     }
 
-    private void Update()
+    private void SpawnEnemy()
     {
-        
+        int enemySpawnIndex = Random.Range(0, enemiesToSpawn.Length);
+        Spawn(enemiesToSpawn[enemySpawnIndex]);
     }
 
-    private void SpawnEnemy()
+    private void Spawn(Enemy enemyToSpawn)
     {
         Vector2 spawnPosition = transform.position;
         spawnPosition.y -= offSet;
 
-        Enemy newEnemy = Instantiate(enemiesToSpawn, spawnPosition, Quaternion.identity) as Enemy;
+        Enemy newEnemy = Instantiate(enemyToSpawn, spawnPosition, Quaternion.identity) as Enemy;
         newEnemy.transform.parent = transform;
     }
 

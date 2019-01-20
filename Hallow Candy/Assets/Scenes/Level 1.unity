@@ -320,8 +320,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff16e45f2750ab04f9190dbb522f7de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemiesToSpawn: {fileID: 5726171410670894482, guid: 195c49a608ea4d24bb081e06070d95ae,
-    type: 3}
+  enemiesToSpawn:
+  - {fileID: 5726171410670894482, guid: 195c49a608ea4d24bb081e06070d95ae, type: 3}
+  - {fileID: 480004250342200836, guid: 49ce14f20ee778946a2dc5282e0eaf86, type: 3}
   minSpawnRate: 5
   maxSpawnRate: 20
   offSet: 0.25
@@ -356,8 +357,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff16e45f2750ab04f9190dbb522f7de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemiesToSpawn: {fileID: 5726171410670894482, guid: 195c49a608ea4d24bb081e06070d95ae,
-    type: 3}
+  enemiesToSpawn:
+  - {fileID: 480004250342200836, guid: 49ce14f20ee778946a2dc5282e0eaf86, type: 3}
   minSpawnRate: 5
   maxSpawnRate: 20
   offSet: 0.25
@@ -422,8 +423,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff16e45f2750ab04f9190dbb522f7de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemiesToSpawn: {fileID: 5726171410670894482, guid: 195c49a608ea4d24bb081e06070d95ae,
-    type: 3}
+  enemiesToSpawn:
+  - {fileID: 5726171410670894482, guid: 195c49a608ea4d24bb081e06070d95ae, type: 3}
+  - {fileID: 480004250342200836, guid: 49ce14f20ee778946a2dc5282e0eaf86, type: 3}
   minSpawnRate: 5
   maxSpawnRate: 20
   offSet: 0.25
@@ -488,8 +490,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff16e45f2750ab04f9190dbb522f7de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemiesToSpawn: {fileID: 5726171410670894482, guid: 195c49a608ea4d24bb081e06070d95ae,
-    type: 3}
+  enemiesToSpawn:
+  - {fileID: 5726171410670894482, guid: 195c49a608ea4d24bb081e06070d95ae, type: 3}
   minSpawnRate: 5
   maxSpawnRate: 20
   offSet: 0.25
@@ -524,8 +526,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff16e45f2750ab04f9190dbb522f7de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemiesToSpawn: {fileID: 5726171410670894482, guid: 195c49a608ea4d24bb081e06070d95ae,
-    type: 3}
+  enemiesToSpawn:
+  - {fileID: 5726171410670894482, guid: 195c49a608ea4d24bb081e06070d95ae, type: 3}
+  - {fileID: 480004250342200836, guid: 49ce14f20ee778946a2dc5282e0eaf86, type: 3}
   minSpawnRate: 5
   maxSpawnRate: 20
   offSet: 0.25
@@ -1001,6 +1004,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6006962787690842981, guid: 602b21eec0d3f6a40abbc02796ed4823,
+        type: 3}
+      propertyPath: enemiesToSpawn.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6006962786959948115, guid: 602b21eec0d3f6a40abbc02796ed4823,
+        type: 3}
+      propertyPath: enemiesToSpawn.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7748664878257267915, guid: 602b21eec0d3f6a40abbc02796ed4823,
+        type: 3}
+      propertyPath: enemiesToSpawn.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6006962786608062416, guid: 602b21eec0d3f6a40abbc02796ed4823,
+        type: 3}
+      propertyPath: enemiesToSpawn.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6006962786682100913, guid: 602b21eec0d3f6a40abbc02796ed4823,
+        type: 3}
+      propertyPath: enemiesToSpawn.Array.size
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 602b21eec0d3f6a40abbc02796ed4823, type: 3}
