@@ -16,12 +16,16 @@ public class Attacker : MonoBehaviour
         }
     }
 
-
-    public void Attack(GameObject defender)
+     public void Attack(GameObject defender)
     {
         currentDefender = defender;
 
-        if(currentDefender)
+        GetComponent<Animator>().SetBool("isAttacking", true);
+    }
+
+    private void HurtCurrentTarget()
+    {
+        if (currentDefender)
         {
             currentDefender.GetComponent<Health>().ReduceHealth(damageDealt);
         }

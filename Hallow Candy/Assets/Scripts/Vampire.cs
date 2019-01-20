@@ -8,7 +8,6 @@ public class Vampire : MonoBehaviour
     {
         if (collision.gameObject.tag == "Defender")
         {
-            GetComponent<Animator>().SetBool("isAttacking", true);
             GetComponent<Attacker>().Attack(collision.transform.parent.gameObject as GameObject);
         }
     }

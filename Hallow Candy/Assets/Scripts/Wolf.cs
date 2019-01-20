@@ -14,7 +14,6 @@ public class Wolf : MonoBehaviour
             }
             else
             {
-                GetComponent<Animator>().SetBool("isAttacking", true);
                 GetComponent<Attacker>().Attack(collision.transform.parent.gameObject as GameObject);
             }
         }
