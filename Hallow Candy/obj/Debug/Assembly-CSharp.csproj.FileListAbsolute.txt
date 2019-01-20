@@ -559,6 +559,5 @@ H:\Programming\Hallow Candy\Temp\bin\Debug\UnityEngine.Timeline.xml
 H:\Programming\Hallow Candy\Temp\bin\Debug\UnityEngine.Networking.xml
 H:\Programming\Hallow Candy\Temp\bin\Debug\UnityEngine.GoogleAudioSpatializer.xml
 H:\Programming\Hallow Candy\Temp\bin\Debug\UnityEngine.SpatialTracking.xml
-H:\Programming\Hallow Candy\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 H:\Programming\Hallow Candy\obj\Debug\Assembly-CSharp.dll
 H:\Programming\Hallow Candy\obj\Debug\Assembly-CSharp.pdb
