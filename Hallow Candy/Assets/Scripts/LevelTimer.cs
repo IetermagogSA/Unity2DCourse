@@ -15,7 +15,7 @@ public class LevelTimer : MonoBehaviour
 
         if(levelTimerFinished)
         {
-            Debug.Log("The level is complete!");
+            FindObjectOfType<LevelController>().SetLevelTimerFinished();
         }
     }
 }

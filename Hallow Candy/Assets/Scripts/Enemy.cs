@@ -16,4 +16,9 @@ public class Enemy : MonoBehaviour
     {
         speed = newSpeed;
     }
+
+    private void OnDestroy()
+    {
+        FindObjectOfType<LevelController>().DecreaseEnemyCount();
+    }
 }

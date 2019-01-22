@@ -561,3 +561,4 @@ H:\Programming\Hallow Candy\Temp\bin\Debug\UnityEngine.GoogleAudioSpatializer.xm
 H:\Programming\Hallow Candy\Temp\bin\Debug\UnityEngine.SpatialTracking.xml
 H:\Programming\Hallow Candy\obj\Debug\Assembly-CSharp.dll
 H:\Programming\Hallow Candy\obj\Debug\Assembly-CSharp.pdb
+H:\Programming\Hallow Candy\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache

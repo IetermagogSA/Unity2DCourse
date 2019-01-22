@@ -5,15 +5,15 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] Enemy[] enemiesToSpawn;
-    [SerializeField] float minSpawnRate = 10f;
-    [SerializeField] float maxSpawnRate = 20f;
+    [SerializeField] float minSpawnRate = 1f;
+    [SerializeField] float maxSpawnRate = 1f;
     [SerializeField] float offSet = 0.25f;
 
-    bool enableSpawn = true;
+    public bool stopSpawning = false;
 
     IEnumerator Start()
     {
-        while(enableSpawn)
+        while(!stopSpawning)
         {
             yield return new WaitForSeconds(Random.Range(minSpawnRate, maxSpawnRate));
             SpawnEnemy();
@@ -25,6 +25,7 @@ public class EnemySpawner : MonoBehaviour
     {
         int enemySpawnIndex = Random.Range(0, enemiesToSpawn.Length);
         Spawn(enemiesToSpawn[enemySpawnIndex]);
+        FindObjectOfType<LevelController>().IncreaseEnemyCount();
     }
 
     private void Spawn(Enemy enemyToSpawn)
@@ -35,5 +36,4 @@ public class EnemySpawner : MonoBehaviour
         Enemy newEnemy = Instantiate(enemyToSpawn, spawnPosition, Quaternion.identity) as Enemy;
         newEnemy.transform.parent = transform;
     }
-
 }

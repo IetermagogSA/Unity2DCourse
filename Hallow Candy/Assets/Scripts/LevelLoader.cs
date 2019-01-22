@@ -27,4 +27,9 @@ public class LevelLoader : MonoBehaviour
     {
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
+
+    public void LoadLevelMap()
+    {
+        SceneManager.LoadScene("Level Map");
+    }
 }
