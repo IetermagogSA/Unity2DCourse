@@ -8,9 +8,7 @@ public class EnemyDestroyer : MonoBehaviour
     {
         if(collision.gameObject.tag == "Enemy")
         {
-            transform.Find("Game Over Canvas").GetComponent<Canvas>().enabled = true;
-            // Pause the game
-            Time.timeScale = 0;
+            FindObjectOfType<LevelController>().HandleGameOver();
         }
     }
 }

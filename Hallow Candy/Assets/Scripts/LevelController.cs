@@ -5,6 +5,7 @@ using UnityEngine;
 public class LevelController : MonoBehaviour
 {
     [SerializeField] GameObject levelCompleteCanvas;
+    [SerializeField] GameObject gameOverCanvas;
 
     public bool isLevelTimerFinished = false;
     public int enemyCount = 0;
@@ -14,6 +15,7 @@ public class LevelController : MonoBehaviour
     {
         Time.timeScale = 1;
         levelCompleteCanvas.SetActive(false);
+        gameOverCanvas.SetActive(false);
     }
 
     void Update()
@@ -60,6 +62,14 @@ public class LevelController : MonoBehaviour
     public void DecreaseEnemyCount()
     {
         enemyCount--;
+    }
+
+    public void HandleGameOver()
+    {
+        gameOverCanvas.SetActive(true);
+        FindObjectOfType<ClickManager>().enabled = false;
+        // Pause the game
+        Time.timeScale = 0;
     }
 
 }

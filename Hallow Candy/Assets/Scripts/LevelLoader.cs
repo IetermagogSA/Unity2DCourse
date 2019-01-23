@@ -23,6 +23,15 @@ public class LevelLoader : MonoBehaviour
         }
     }
 
+    public void LoadMainMenuNoWait()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+    public void ReloadLevel()
+    {
+        SceneManager.LoadScene(currentSceneIndex);
+    }
+
     public void LoadNextScene()
     {
         SceneManager.LoadScene(currentSceneIndex + 1);

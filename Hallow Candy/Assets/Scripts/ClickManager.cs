@@ -18,7 +18,6 @@ public class ClickManager : MonoBehaviour
             {
                 RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero, Mathf.Infinity, layerMask);
                 hit.collider.GetComponent<CurrencyCandy>().CandyClicked();
-                //FindObjectOfType<CurrencyCandy>().CandyClicked();
             }
             else
             {
