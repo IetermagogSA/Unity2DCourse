@@ -19,6 +19,10 @@ public class Enemy : MonoBehaviour
 
     private void OnDestroy()
     {
-        FindObjectOfType<LevelController>().DecreaseEnemyCount();
+        LevelController levelController = FindObjectOfType<LevelController>();
+        if(levelController != null)
+        {
+            levelController.DecreaseEnemyCount();
+        }
     }
 }

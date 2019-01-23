@@ -41,4 +41,9 @@ public class LevelLoader : MonoBehaviour
     {
         SceneManager.LoadScene("Level Map");
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
