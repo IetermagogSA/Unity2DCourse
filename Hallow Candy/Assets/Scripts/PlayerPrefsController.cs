@@ -31,7 +31,7 @@ public class PlayerPrefsController : MonoBehaviour
     {
         if (difficulty >= MIN_DIFFICULTY && difficulty <= MAX_DIFFCULTY)
         {
-            PlayerPrefs.SetInt(MASTER_VOLUME_KEY, difficulty);
+            PlayerPrefs.SetInt(DIFFICULTY_KEY, difficulty);
         }
     }
 
