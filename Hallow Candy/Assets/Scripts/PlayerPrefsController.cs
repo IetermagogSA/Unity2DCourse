@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerPrefsController : MonoBehaviour
 {
+    // Constants
     const string MASTER_VOLUME_KEY = "master volume";
     const string DIFFICULTY_KEY = "difficulty";
 

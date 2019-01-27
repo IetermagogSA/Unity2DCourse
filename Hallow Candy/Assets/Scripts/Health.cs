@@ -11,6 +11,24 @@ public class Health : MonoBehaviour
 
     private void Awake()
     {
+        // Set the health based on the difficulty -- only if this is set on an enemy
+        if (FindObjectOfType<Enemy>())
+        {
+            switch (PlayerPrefsController.GetDifficulty())
+            {
+                case 0:
+                    // do nothing
+                    break;
+                case 1:
+                    health *= 2;
+                    break;
+                case 2:
+                    health *= 3;
+                    break;
+            }
+        }
+
+
         animator = GetComponent<Animator>();
 
         if (GetComponent<PolygonCollider2D>())
