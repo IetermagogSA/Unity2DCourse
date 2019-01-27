@@ -10,10 +10,4 @@ public class Defender : MonoBehaviour
     {
         return defenderCost;
     }
-
-    //public void AddCandies(int amountToAdd)
-    //{
-    //    CandiesDisplay candiesDisplay = FindObjectOfType<CandiesDisplay>();
-    //    candiesDisplay.AddCandies(amountToAdd);
-    //}
 }

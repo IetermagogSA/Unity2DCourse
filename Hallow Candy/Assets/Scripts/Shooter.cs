@@ -66,6 +66,8 @@ public class Shooter : MonoBehaviour
     {
         var proj = Instantiate(projectile, gun.transform.position, new Quaternion(0f, 0f, 0f, 90f));
 
+        proj.transform.parent = gun.transform;
+
         yield return new WaitForEndOfFrame(); // We need to wait for the next frame before the correct length of the clip will be returned
 
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);

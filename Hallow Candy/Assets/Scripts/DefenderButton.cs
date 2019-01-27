@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class DefenderButton : MonoBehaviour
 {
@@ -14,6 +15,24 @@ public class DefenderButton : MonoBehaviour
     {
         sprite = GetComponent<SpriteRenderer>();
         candiesDisplay = FindObjectOfType<CandiesDisplay>();
+    }
+
+    private void Start()
+    {
+        LabelDefenderCost();
+    }
+
+    private void LabelDefenderCost()
+    {
+        TextMeshProUGUI defenderCostText = GetComponentInChildren<TextMeshProUGUI>();
+        if(defenderCostText)
+        {
+            defenderCostText.text = defender.GetDefenderCost().ToString();
+        }
+        else
+        {
+            Debug.LogError("You have not set a cost label for " + name);
+        }
     }
     private void Update()
     {

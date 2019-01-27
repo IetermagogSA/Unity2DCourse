@@ -9,9 +9,24 @@ public class DefenderSpawner : MonoBehaviour
     Defender defender;
     CandiesDisplay candiesDisplay;
 
+    GameObject defenderParent;
+
+    const string DEFENDER_PARENT_NAME = "Defenders";
+
     private void Start()
     {
         candiesDisplay = FindObjectOfType<CandiesDisplay>();
+
+        CreateDefendersParent();
+    }
+
+    private void CreateDefendersParent()
+    {
+        defenderParent = GameObject.Find(DEFENDER_PARENT_NAME);
+        if(!defenderParent)
+        {
+            defenderParent = new GameObject(DEFENDER_PARENT_NAME);
+        }
     }
 
     public void SetSelectedDefender(Defender selectedDefender)
@@ -35,7 +50,8 @@ public class DefenderSpawner : MonoBehaviour
         if (defender)
         {
             candiesDisplay.DeceaseCandies(defender.GetDefenderCost());
-            Instantiate(defender, GetSquareClicked(), transform.rotation);
+            Defender myDefender = Instantiate(defender, GetSquareClicked(), transform.rotation) as Defender;
+            myDefender.transform.parent = defenderParent.transform;
             defender = null;
         }
     }
