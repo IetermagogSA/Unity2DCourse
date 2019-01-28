@@ -17,13 +17,13 @@ public class Health : MonoBehaviour
             switch (PlayerPrefsController.GetDifficulty())
             {
                 case 0:
-                    // do nothing
+                    health = (int)(health / 0.75);
                     break;
                 case 1:
-                    health *= 2;
+                    // do nothing
                     break;
                 case 2:
-                    health *= 3;
+                    health = (int)(health / 1.5);
                     break;
             }
         }

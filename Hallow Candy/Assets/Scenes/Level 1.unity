@@ -317,41 +317,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemiesToSpawn:
   - {fileID: 5726171410670894482, guid: 195c49a608ea4d24bb081e06070d95ae, type: 3}
-  - {fileID: 480004250342200836, guid: 49ce14f20ee778946a2dc5282e0eaf86, type: 3}
   minSpawnRate: 5
   maxSpawnRate: 20
   offSet: 0.25
   stopSpawning: 0
---- !u!1 &420475988
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 420475989}
-  m_Layer: 0
-  m_Name: Defenders
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &420475989
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 420475988}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.7848835, y: 2.6175368, z: 16.752747}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &608026759 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 608026759, guid: f05695beed14bc3409892206b2fac927,
@@ -381,7 +350,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &950432564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -454,7 +423,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1155709378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -534,7 +503,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1748992002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -571,7 +540,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1814979811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1516,7 +1485,7 @@ PrefabInstance:
     - target: {fileID: 6006962787690842981, guid: 602b21eec0d3f6a40abbc02796ed4823,
         type: 3}
       propertyPath: enemiesToSpawn.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6006962787690842981, guid: 602b21eec0d3f6a40abbc02796ed4823,
         type: 3}
@@ -1527,6 +1496,11 @@ PrefabInstance:
         type: 3}
       propertyPath: maxSpawnRate
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6006962786959948116, guid: 602b21eec0d3f6a40abbc02796ed4823,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6006962786959948115, guid: 602b21eec0d3f6a40abbc02796ed4823,
         type: 3}
@@ -1543,6 +1517,11 @@ PrefabInstance:
       propertyPath: maxSpawnRate
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 7748664878257267916, guid: 602b21eec0d3f6a40abbc02796ed4823,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7748664878257267915, guid: 602b21eec0d3f6a40abbc02796ed4823,
         type: 3}
       propertyPath: enemiesToSpawn.Array.size
@@ -1558,6 +1537,11 @@ PrefabInstance:
       propertyPath: maxSpawnRate
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 6006962786608062423, guid: 602b21eec0d3f6a40abbc02796ed4823,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6006962786608062416, guid: 602b21eec0d3f6a40abbc02796ed4823,
         type: 3}
       propertyPath: enemiesToSpawn.Array.size
@@ -1572,6 +1556,11 @@ PrefabInstance:
         type: 3}
       propertyPath: maxSpawnRate
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6006962786682100918, guid: 602b21eec0d3f6a40abbc02796ed4823,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6006962786682100913, guid: 602b21eec0d3f6a40abbc02796ed4823,
         type: 3}
