@@ -24,15 +24,19 @@ public class Shooter : MonoBehaviour
     private void Update()
     {
 
-        if(isAttackerInLane() && !isAttackOnCooldown)
+        if(!isAttackOnCooldown)
         {
-            StartCoroutine(Fire());
+            if (isAttackerInLane())
+            {
+                StartCoroutine(Fire());
+            }
+            else
+            {
+                // Sit and wait
+                animator.SetBool("isAttacking", false);
+            }
         }
-        else if (!isAttackerInLane())
-        {
-            // Sit and wait
-            animator.SetBool("isAttacking", false);
-        }
+
     }
 
     private void GetMyEnemySpawner()
@@ -72,29 +76,18 @@ public class Shooter : MonoBehaviour
 
     }
 
-    public void FireProjectile()
+    IEnumerator FireProjectile()
     {
         var proj = Instantiate(projectile, gun.transform.position, new Quaternion(0f, 0f, 0f, 90f));
 
         proj.transform.parent = gun.transform;
 
-        //yield return new WaitForEndOfFrame(); // We need to wait for the next frame before the correct length of the clip will be returned
+        yield return new WaitForEndOfFrame(); // We need to wait for the next frame before the correct length of the clip will be returned
 
-        //yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
 
-        //animator.SetBool("isAttacking", false);
-        //Debug.Log("Animator set to false");
-
-        //isAttackOnCooldown = false;
-        //Debug.Log("AttackCooldown set to false");
-    }
-
-    public void SwitchOffAttack()
-    {
-        Debug.Log("Switching off attack");
-        isAttackOnCooldown = false;
         animator.SetBool("isAttacking", false);
-        Debug.Log("isAttackCooldown: " + isAttackOnCooldown);
-        Debug.Log("animator.Setbool : " + animator.GetBool("isAttacking"));
+
+        isAttackOnCooldown = false;
     }
 }

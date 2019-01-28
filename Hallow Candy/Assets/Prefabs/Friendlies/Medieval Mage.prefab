@@ -12521,13 +12521,6 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.36666667
-    functionName: SwitchOffAttack
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
 --- !u!74 &74300256725688024
 AnimationClip:
   m_ObjectHideFlags: 0
