@@ -366,6 +366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesToSpawn:
+  - {fileID: 5726171410670894482, guid: 195c49a608ea4d24bb081e06070d95ae, type: 3}
   - {fileID: 480004250342200836, guid: 49ce14f20ee778946a2dc5282e0eaf86, type: 3}
   minSpawnRate: 5
   maxSpawnRate: 20
@@ -380,7 +381,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 950432563}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12, y: 4, z: -0.15586223}
+  m_LocalPosition: {x: 12, y: 4, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 299466813}
@@ -395,7 +396,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1155709377}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12, y: 1, z: -0.15586223}
+  m_LocalPosition: {x: 12, y: 1, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 299466813}
@@ -454,7 +455,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1814979810}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12, y: 5, z: -0.15586223}
+  m_LocalPosition: {x: 12, y: 5, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 299466813}
@@ -481,7 +482,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1748992001}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12, y: 2, z: -0.15586223}
+  m_LocalPosition: {x: 12, y: 2, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 299466813}
@@ -520,6 +521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemiesToSpawn:
   - {fileID: 5726171410670894482, guid: 195c49a608ea4d24bb081e06070d95ae, type: 3}
+  - {fileID: 480004250342200836, guid: 49ce14f20ee778946a2dc5282e0eaf86, type: 3}
   minSpawnRate: 5
   maxSpawnRate: 20
   offSet: 0.25
@@ -571,7 +573,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 344158928}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12, y: 3, z: -0.15586223}
+  m_LocalPosition: {x: 12, y: 3, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 299466813}
@@ -1511,7 +1513,7 @@ PrefabInstance:
     - target: {fileID: 6006962786959948115, guid: 602b21eec0d3f6a40abbc02796ed4823,
         type: 3}
       propertyPath: enemiesToSpawn.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6006962786959948115, guid: 602b21eec0d3f6a40abbc02796ed4823,
         type: 3}
@@ -1522,6 +1524,16 @@ PrefabInstance:
         type: 3}
       propertyPath: maxSpawnRate
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6006962786959948114, guid: 602b21eec0d3f6a40abbc02796ed4823,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7748664878257267914, guid: 602b21eec0d3f6a40abbc02796ed4823,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 7748664878257267916, guid: 602b21eec0d3f6a40abbc02796ed4823,
         type: 3}
@@ -1543,6 +1555,16 @@ PrefabInstance:
       propertyPath: maxSpawnRate
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 6006962786682100912, guid: 602b21eec0d3f6a40abbc02796ed4823,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6006962786608062417, guid: 602b21eec0d3f6a40abbc02796ed4823,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 6006962786608062423, guid: 602b21eec0d3f6a40abbc02796ed4823,
         type: 3}
       propertyPath: m_IsActive
@@ -1551,7 +1573,7 @@ PrefabInstance:
     - target: {fileID: 6006962786608062416, guid: 602b21eec0d3f6a40abbc02796ed4823,
         type: 3}
       propertyPath: enemiesToSpawn.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6006962786608062416, guid: 602b21eec0d3f6a40abbc02796ed4823,
         type: 3}
@@ -1582,6 +1604,11 @@ PrefabInstance:
         type: 3}
       propertyPath: maxSpawnRate
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6006962787690842980, guid: 602b21eec0d3f6a40abbc02796ed4823,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 602b21eec0d3f6a40abbc02796ed4823, type: 3}

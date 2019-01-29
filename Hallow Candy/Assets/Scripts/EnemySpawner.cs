@@ -30,8 +30,9 @@ public class EnemySpawner : MonoBehaviour
 
     private void Spawn(Enemy enemyToSpawn)
     {
-        Vector2 spawnPosition = transform.position;
+        Vector3 spawnPosition = transform.position;
         spawnPosition.y -= offSet;
+        spawnPosition.z = -1;
 
         Enemy newEnemy = Instantiate(enemyToSpawn, spawnPosition, Quaternion.identity) as Enemy;
         newEnemy.transform.parent = transform;

@@ -534,7 +534,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 5791306059242713057, guid: 16a92006ea501b84b91b949734ce42a8,
     type: 3}
-  attackSpeedCooldown: 0.5
+  attackSpeedCooldown: 1
 --- !u!114 &6811211433050338542
 MonoBehaviour:
   m_ObjectHideFlags: 0

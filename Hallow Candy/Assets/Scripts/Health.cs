@@ -48,6 +48,21 @@ public class Health : MonoBehaviour
         {
             StartCoroutine(Die());
         }
+        else
+        {
+            animator.SetTrigger("hitTrigger");
+        }
+    }
+
+    IEnumerator PlayHitAnimation()
+    {
+        animator.SetBool("isHit", true);
+
+        yield return new WaitForEndOfFrame();
+
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+
+        animator.SetBool("isHit", false);
     }
 
     IEnumerator Die()
