@@ -17,13 +17,13 @@ public class Health : MonoBehaviour
             switch (PlayerPrefsController.GetDifficulty())
             {
                 case 0:
-                    health = (int)(health / 0.75);
+                    health = (int)(health * 0.75);
                     break;
                 case 1:
                     // do nothing
                     break;
                 case 2:
-                    health = (int)(health / 1.5);
+                    health = (int)(health * 1.5);
                     break;
             }
         }
@@ -57,7 +57,6 @@ public class Health : MonoBehaviour
             collider.enabled = false;
         }
 
-        //animator.Play("Dying");
         animator.SetBool("isDying", true);
         yield return new WaitForEndOfFrame(); // We need to wait for the next frame before the correct length of the clip will be returned
 
