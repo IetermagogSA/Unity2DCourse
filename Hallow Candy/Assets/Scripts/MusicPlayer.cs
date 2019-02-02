@@ -33,4 +33,10 @@ public class MusicPlayer : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
     }
+
+    public void ChangeTrack(AudioClip audioclip)
+    {
+        audioSource.clip = audioclip;
+        audioSource.Play();
+    }
 }

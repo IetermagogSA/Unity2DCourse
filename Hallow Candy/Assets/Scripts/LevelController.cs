@@ -6,6 +6,7 @@ public class LevelController : MonoBehaviour
 {
     [SerializeField] GameObject levelCompleteCanvas;
     [SerializeField] GameObject gameOverCanvas;
+    [SerializeField] public AudioClip levelMusic;
 
     public bool isLevelTimerFinished = false;
     public int enemyCount = 0;
@@ -16,6 +17,15 @@ public class LevelController : MonoBehaviour
         Time.timeScale = 1;
         levelCompleteCanvas.SetActive(false);
         gameOverCanvas.SetActive(false);
+        StartLevelMusic();
+    }
+
+    public void StartLevelMusic()
+    {
+        if (FindObjectOfType<MusicPlayer>())
+        { 
+            FindObjectOfType<MusicPlayer>().ChangeTrack(levelMusic);
+        }
     }
 
     void Update()

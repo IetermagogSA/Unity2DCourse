@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class Wolf : MonoBehaviour
 {
+
+    private void Awake()
+    {
+        GetComponent<CharacterSoundController>().PlaySpawningSound();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Defender")

@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Vampire : MonoBehaviour
 {
+    private void Awake()
+    {
+        GetComponent<CharacterSoundController>().PlaySpawningSound();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Defender")
