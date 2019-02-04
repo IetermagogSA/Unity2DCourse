@@ -9,6 +9,7 @@ public class CharacterSoundController : MonoBehaviour
     [SerializeField] AudioClip[] hurtSounds;
     [SerializeField] AudioClip[] dyingSounds;
     [SerializeField] AudioClip[] attackSounds;
+    [SerializeField] AudioClip[] specialSounds;
 
     // Reference to the audiosource on the character
     AudioSource audiosource;
@@ -54,6 +55,12 @@ public class CharacterSoundController : MonoBehaviour
     {
         // Select which sound to play
         audiosource.PlayOneShot(attackSounds[Random.Range(0, attackSounds.Length)]);
+    }
+
+    public void PlaySpecialSound()
+    {
+        // Select which sound to play
+        audiosource.PlayOneShot(specialSounds[Random.Range(0, specialSounds.Length)]);
     }
 
     private bool ShouldSoundPlay()

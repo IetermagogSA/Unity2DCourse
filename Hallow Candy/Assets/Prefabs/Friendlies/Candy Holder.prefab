@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 2420607960313846608}
   - component: {fileID: 6983106069966831854}
   - component: {fileID: 2639265635664247797}
+  - component: {fileID: 8919739852740813303}
+  - component: {fileID: 2638392025923747672}
   m_Layer: 10
   m_Name: Candy Holder
   m_TagString: Untagged
@@ -192,6 +194,126 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!82 &8919739852740813303
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6295659707464149679}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &2638392025923747672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6295659707464149679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4f2adac936b3834f8cd21abb9305172, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawningSounds: []
+  hurtSounds:
+  - {fileID: 8300000, guid: 3a10d0f77b8d8004ea4419fef997be8b, type: 3}
+  - {fileID: 8300000, guid: 1c351a8eb6c23494fac82aa92b5a018b, type: 3}
+  dyingSounds:
+  - {fileID: 8300000, guid: 54f3d219b53f64040a6c4514aa9ac836, type: 3}
+  - {fileID: 8300000, guid: 13a8fbb7381b8844fb86ea69e7f595fc, type: 3}
+  attackSounds: []
+  specialSounds:
+  - {fileID: 8300000, guid: 828e38c415bcf7b4fbc700b7ec25881e, type: 3}
+  - {fileID: 8300000, guid: 83b1e5f34d0b7054194e69b9a9735bf4, type: 3}
+  - {fileID: 8300000, guid: d3223da3285f4d540a3cfbc0d0e73efe, type: 3}
 --- !u!1 &6603456664535907898
 GameObject:
   m_ObjectHideFlags: 0
