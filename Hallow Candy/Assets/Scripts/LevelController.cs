@@ -6,6 +6,7 @@ public class LevelController : MonoBehaviour
 {
     [SerializeField] GameObject levelCompleteCanvas;
     [SerializeField] GameObject gameOverCanvas;
+    [SerializeField] GameObject pauseCanvas;
     [SerializeField] public AudioClip levelMusic;
 
     public bool isLevelTimerFinished = false;
@@ -17,6 +18,7 @@ public class LevelController : MonoBehaviour
         Time.timeScale = 1;
         levelCompleteCanvas.SetActive(false);
         gameOverCanvas.SetActive(false);
+        pauseCanvas.SetActive(false);
         StartLevelMusic();
     }
 
@@ -35,6 +37,18 @@ public class LevelController : MonoBehaviour
             // Stop the spawners
             StopAllSpawners();
             LoadNextLevel();
+        }
+        else
+        {
+            CheckIfPauseClicked();
+        }
+    }
+
+    private void CheckIfPauseClicked()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            PauseGame();
         }
     }
 
@@ -81,5 +95,19 @@ public class LevelController : MonoBehaviour
         // Pause the game
         Time.timeScale = 0;
     }
+
+    public void PauseGame()
+    {
+        pauseCanvas.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void ResumeGame()
+    {
+        pauseCanvas.SetActive(false);
+        Time.timeScale = 1;
+    }
+
+
 
 }

@@ -5,8 +5,8 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] Enemy[] enemiesToSpawn;
-    [SerializeField] float minSpawnRate = 1f;
-    [SerializeField] float maxSpawnRate = 1f;
+    [SerializeField] public float minSpawnRate = 1f;
+    [SerializeField] public float maxSpawnRate = 1f;
     [SerializeField] float offSet = 0.25f;
 
     public bool stopSpawning = false;
