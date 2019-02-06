@@ -1322,6 +1322,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level Controller
       objectReference: {fileID: 0}
+    - target: {fileID: 608026757, guid: f05695beed14bc3409892206b2fac927, type: 3}
+      propertyPath: levelCompleteCanvas
+      value: 
+      objectReference: {fileID: 1055433855}
+    - target: {fileID: 608026757, guid: f05695beed14bc3409892206b2fac927, type: 3}
+      propertyPath: gameOverCanvas
+      value: 
+      objectReference: {fileID: 1542630550}
+    - target: {fileID: 608026757, guid: f05695beed14bc3409892206b2fac927, type: 3}
+      propertyPath: levelMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 33e0f066da43cf343be48ff34722c182, type: 3}
+    - target: {fileID: 608026757, guid: f05695beed14bc3409892206b2fac927, type: 3}
+      propertyPath: pauseCanvas
+      value: 
+      objectReference: {fileID: 975714269}
     - target: {fileID: 4737934322643797433, guid: f05695beed14bc3409892206b2fac927,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1377,22 +1393,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 608026757, guid: f05695beed14bc3409892206b2fac927, type: 3}
-      propertyPath: levelCompleteCanvas
-      value: 
-      objectReference: {fileID: 1055433855}
-    - target: {fileID: 608026757, guid: f05695beed14bc3409892206b2fac927, type: 3}
-      propertyPath: gameOverCanvas
-      value: 
-      objectReference: {fileID: 1542630550}
-    - target: {fileID: 608026757, guid: f05695beed14bc3409892206b2fac927, type: 3}
-      propertyPath: levelMusic
-      value: 
-      objectReference: {fileID: 8300000, guid: 33e0f066da43cf343be48ff34722c182, type: 3}
-    - target: {fileID: 608026757, guid: f05695beed14bc3409892206b2fac927, type: 3}
-      propertyPath: pauseCanvas
-      value: 
-      objectReference: {fileID: 975714269}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f05695beed14bc3409892206b2fac927, type: 3}
 --- !u!1001 &6168480503336933989
@@ -1645,6 +1645,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6880392620228268186, guid: aa739bc3a374b8b4f80acf03b000432d,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 2.9657383
+      objectReference: {fileID: 0}
+    - target: {fileID: 6880392620228268186, guid: aa739bc3a374b8b4f80acf03b000432d,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 4.657962
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa739bc3a374b8b4f80acf03b000432d, type: 3}

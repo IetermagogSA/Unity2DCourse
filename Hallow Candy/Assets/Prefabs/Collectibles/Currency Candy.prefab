@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03e33910b8371504ab8b22e1a23dc147, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  candyValue: 10
+  candyValue: 25
   idleTime: 10
 --- !u!1 &2092403896389915953
 GameObject:

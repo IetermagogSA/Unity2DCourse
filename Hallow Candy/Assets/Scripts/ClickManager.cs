@@ -27,7 +27,7 @@ public class ClickManager : MonoBehaviour
                 {
                     // Do not allow spawning
                 }
-                else // Does the ray intersect any objects which are in the GameArea layer.
+                else  // Does the ray intersect any objects which are in the GameArea layer.
                 {
                     layerMask = 1 << 8;
                     if (Physics2D.Raycast(mousePos2D, Vector3.forward, Mathf.Infinity, layerMask))
