@@ -17,4 +17,12 @@ public class Blocker : MonoBehaviour
             animator.SetBool("isBlocking", true);
         }
     }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            animator.SetBool("isBlocking", false);
+        }
+    }
 }

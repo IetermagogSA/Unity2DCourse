@@ -69,7 +69,7 @@ public class Health : MonoBehaviour
     {
         if (collider)
         {
-            collider.enabled = false;
+            //collider.enabled = false;
         }
 
         animator.SetBool("isDying", true);

@@ -76,6 +76,19 @@ public class DefenderSpawner : MonoBehaviour
             {
                 mouseDefender.GetComponent<Shooter>().enabled = false;
             }
+
+            var boxColliders = mouseDefender.GetComponentsInChildren<BoxCollider2D>();
+            foreach(var boxCollider in boxColliders)
+            {
+                boxCollider.enabled = false;
+            }
+
+            var spriteRenderers = mouseDefender.GetComponentsInChildren<SpriteRenderer>();
+            foreach(var spriteRenderer in spriteRenderers)
+            {
+                spriteRenderer.sortingLayerName = "MouseDefender";
+            }
+                
         }
     }
 
