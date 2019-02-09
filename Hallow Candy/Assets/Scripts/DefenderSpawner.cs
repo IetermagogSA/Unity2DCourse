@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DefenderSpawner : MonoBehaviour
 {
-    [SerializeField] float offSet = 0.25f;
+    [SerializeField] float offSet = 0.5f;
 
     Defender defender;
     public Defender mouseDefender;
@@ -48,6 +48,11 @@ public class DefenderSpawner : MonoBehaviour
         SpawnDefenderToFollowMouse();
     }
 
+    public Defender GetSelectedDefender()
+    {
+        return defender;
+    }
+
     private Vector2 GetSquareClicked()
     {
         Vector2 mousePos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
@@ -71,10 +76,13 @@ public class DefenderSpawner : MonoBehaviour
             mouseDefender.gameObject.layer = 0;
 
             // Disable some unwanted behaviour
-            mouseDefender.GetComponent<Animator>().enabled = false;
-            if (mouseDefender.GetComponent<Shooter>())
+            if (defender.GetDefenderCost() > 0)
             {
-                mouseDefender.GetComponent<Shooter>().enabled = false;
+                mouseDefender.GetComponent<Animator>().enabled = false;
+                if (mouseDefender.GetComponent<Shooter>())
+                {
+                    mouseDefender.GetComponent<Shooter>().enabled = false;
+                }
             }
 
             var boxColliders = mouseDefender.GetComponentsInChildren<BoxCollider2D>();
@@ -88,13 +96,17 @@ public class DefenderSpawner : MonoBehaviour
             {
                 spriteRenderer.sortingLayerName = "MouseDefender";
             }
-                
         }
+    }
+
+    public void DestroyMouseDefender()
+    {
+        GameObject.Destroy(mouseDefender.gameObject);
     }
 
     public void SpawnDefender()
     {
-        if (defender)
+        if (defender && defender.GetDefenderCost() > 0)
         {
             candiesDisplay.DeceaseCandies(defender.GetDefenderCost());
             Defender myDefender = Instantiate(defender, GetSquareClicked(), transform.rotation) as Defender;

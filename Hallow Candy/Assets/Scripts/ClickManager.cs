@@ -26,6 +26,25 @@ public class ClickManager : MonoBehaviour
                 if (Physics2D.Raycast(mousePos2D, Vector3.forward, Mathf.Infinity, layerMask))
                 {
                     // Do not allow spawning
+                    // Destroy the defender if the scytche has been selected
+                    if (FindObjectOfType<DefenderSpawner>().GetSelectedDefender().GetDefenderCost() == 0)
+                    {
+                        RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero, Mathf.Infinity, layerMask);
+
+                        if (hit.collider.tag == "Defender")
+                        {
+                            GameObject.Destroy(hit.collider.gameObject);
+                            // Destroy the parent as well - this is the actual gameobject we want
+                            hit = Physics2D.Raycast(mousePos2D, Vector2.zero, Mathf.Infinity, layerMask);
+                            GameObject.Destroy(hit.collider.gameObject);
+                        }
+                        else
+                        {
+                            GameObject.Destroy(hit.collider.gameObject);
+                        }
+
+                        FindObjectOfType<DefenderSpawner>().DestroyMouseDefender();
+                    }
                 }
                 else  // Does the ray intersect any objects which are in the GameArea layer.
                 {
