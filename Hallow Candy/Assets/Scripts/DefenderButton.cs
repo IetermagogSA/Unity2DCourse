@@ -6,6 +6,9 @@ using TMPro;
 public class DefenderButton : MonoBehaviour
 {
     [SerializeField] Defender defender;
+    [SerializeField] GameObject bloodySelector;
+
+    DefenderSpawner defenderSpawner;
 
     CandiesDisplay candiesDisplay;
 
@@ -15,6 +18,7 @@ public class DefenderButton : MonoBehaviour
     {
         sprite = GetComponent<SpriteRenderer>();
         candiesDisplay = FindObjectOfType<CandiesDisplay>();
+        defenderSpawner = FindObjectOfType<DefenderSpawner>();
     }
 
     private void Start()
@@ -43,18 +47,44 @@ public class DefenderButton : MonoBehaviour
         else
         {
             sprite.color = Color.grey;
+
+            if (defenderSpawner.defender && defenderSpawner.defender.GetDefenderCost() > 0)
+            {
+                DeselectDefenderButton();
+                defenderSpawner.ResetSelectedDefender();
+            }
         }
     }
     private void OnMouseDown()
     {
         if (candiesDisplay.GetCandiesToSpend() >= defender.GetDefenderCost())
         {
-            FindObjectOfType<DefenderSpawner>().SetSelectedDefender(defender);
+            DeselectDefenderButtons();
+            bloodySelector.SetActive(true);
+            defenderSpawner.SetSelectedDefender(defender);
         }
     }
 
     public void DeselectDefender()
     {
         sprite.color = Color.grey;
+    }
+
+    private void DeselectDefenderButton()
+    {
+        GameObject obj = GameObject.FindGameObjectWithTag("BloodyDefenderSelector");
+        if (obj)
+        {
+            obj.SetActive(false);
+        }
+    }
+
+    public void DeselectDefenderButtons()
+    {
+        GameObject[] objects = GameObject.FindGameObjectsWithTag("BloodyDefenderSelector");
+        foreach (GameObject obj in objects)
+        {
+            obj.SetActive(false);
+        }
     }
 }

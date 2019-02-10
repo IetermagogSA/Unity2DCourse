@@ -562,3 +562,11 @@ H:\Programming\Hallow Candy\Temp\bin\Debug\UnityEngine.SpatialTracking.xml
 H:\Programming\Hallow Candy\obj\Debug\Assembly-CSharp.dll
 H:\Programming\Hallow Candy\obj\Debug\Assembly-CSharp.pdb
 H:\Programming\Hallow Candy\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+H:\Programming\Hallow Candy\Temp\bin\Debug\ChannelPurchase.dll
+H:\Programming\Hallow Candy\Temp\bin\Debug\Editor.dll
+H:\Programming\Hallow Candy\Temp\bin\Debug\UnityEngine.SpatialTrackingModule.dll
+H:\Programming\Hallow Candy\Temp\bin\Debug\UnityStore.dll
+H:\Programming\Hallow Candy\Temp\bin\Debug\XiaomiSupport.dll
+H:\Programming\Hallow Candy\Temp\bin\Debug\Editor.pdb
+H:\Programming\Hallow Candy\Temp\bin\Debug\XiaomiSupport.pdb
+H:\Programming\Hallow Candy\Temp\bin\Debug\UnityEngine.SpatialTrackingModule.xml

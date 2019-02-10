@@ -1308,16 +1308,6 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4265062864757836025, guid: 68e3d7c43141fb446b554604879667e7,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.0944
-      objectReference: {fileID: 0}
-    - target: {fileID: 4265062864757836025, guid: 68e3d7c43141fb446b554604879667e7,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.83850896
-      objectReference: {fileID: 0}
     - target: {fileID: 1693152870, guid: 68e3d7c43141fb446b554604879667e7, type: 3}
       propertyPath: m_havePropertiesChanged
       value: 1

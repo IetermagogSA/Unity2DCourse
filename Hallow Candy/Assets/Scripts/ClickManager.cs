@@ -27,23 +27,28 @@ public class ClickManager : MonoBehaviour
                 {
                     // Do not allow spawning
                     // Destroy the defender if the scytche has been selected
-                    if (FindObjectOfType<DefenderSpawner>().GetSelectedDefender().GetDefenderCost() == 0)
+                    Defender defender = FindObjectOfType<DefenderSpawner>().GetSelectedDefender();
+                    if (defender)
                     {
-                        RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero, Mathf.Infinity, layerMask);
-
-                        if (hit.collider.tag == "Defender")
+                        if (defender.GetDefenderCost() == 0)
                         {
-                            GameObject.Destroy(hit.collider.gameObject);
-                            // Destroy the parent as well - this is the actual gameobject we want
-                            hit = Physics2D.Raycast(mousePos2D, Vector2.zero, Mathf.Infinity, layerMask);
-                            GameObject.Destroy(hit.collider.gameObject);
-                        }
-                        else
-                        {
-                            GameObject.Destroy(hit.collider.gameObject);
-                        }
+                            RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero, Mathf.Infinity, layerMask);
 
-                        FindObjectOfType<DefenderSpawner>().DestroyMouseDefender();
+                            if (hit.collider.tag == "Defender")
+                            {
+                                GameObject.Destroy(hit.collider.gameObject);
+                                // Destroy the parent as well - this is the actual gameobject we want
+                                hit = Physics2D.Raycast(mousePos2D, Vector2.zero, Mathf.Infinity, layerMask);
+                                GameObject.Destroy(hit.collider.gameObject);
+                            }
+                            else
+                            {
+                                GameObject.Destroy(hit.collider.gameObject);
+                            }
+
+                            FindObjectOfType<DefenderSpawner>().ResetSelectedDefender();
+                            FindObjectOfType<DefenderButton>().DeselectDefenderButtons();
+                        }
                     }
                 }
                 else  // Does the ray intersect any objects which are in the GameArea layer.

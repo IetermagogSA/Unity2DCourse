@@ -6,8 +6,8 @@ public class DefenderSpawner : MonoBehaviour
 {
     [SerializeField] float offSet = 0.5f;
 
-    Defender defender;
-    public Defender mouseDefender;
+    public Defender defender;
+    //public Defender mouseDefender;
     CandiesDisplay candiesDisplay;
 
     GameObject defenderParent;
@@ -21,16 +21,16 @@ public class DefenderSpawner : MonoBehaviour
         CreateDefendersParent();
     }
 
-    private void Update()
-    {
-        if(mouseDefender)
-        {
-            Vector2 mousePos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-            Vector2 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
+    //private void Update()
+    //{
+    //    if(mouseDefender)
+    //    {
+    //        Vector2 mousePos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+    //        Vector2 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
 
-            mouseDefender.transform.position = worldPos;
-        }
-    }
+    //        mouseDefender.transform.position = worldPos;
+    //    }
+    //}
 
     private void CreateDefendersParent()
     {
@@ -44,13 +44,16 @@ public class DefenderSpawner : MonoBehaviour
     public void SetSelectedDefender(Defender selectedDefender)
     {
         defender = selectedDefender;
-
-        SpawnDefenderToFollowMouse();
     }
 
     public Defender GetSelectedDefender()
     {
         return defender;
+    }
+
+    public void ResetSelectedDefender()
+    {
+        defender = null;
     }
 
     private Vector2 GetSquareClicked()
@@ -64,45 +67,45 @@ public class DefenderSpawner : MonoBehaviour
         return worldPos;
     }
 
-    public void SpawnDefenderToFollowMouse()
-    {
-        if (defender)
-        {
-            Vector2 mousePos = new Vector2(Input.mousePosition.x + 2f, Input.mousePosition.y + 2f);
-            Vector2 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
+    //public void SpawnDefenderToFollowMouse()
+    //{
+    //    if (defender)
+    //    {
+    //        Vector2 mousePos = new Vector2(Input.mousePosition.x + 2f, Input.mousePosition.y + 2f);
+    //        Vector2 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
 
-            mouseDefender = Instantiate(defender, worldPos, transform.rotation) as Defender;
+    //        mouseDefender = Instantiate(defender, worldPos, transform.rotation) as Defender;
 
-            mouseDefender.gameObject.layer = 0;
+    //        mouseDefender.gameObject.layer = 0;
 
-            // Disable some unwanted behaviour
-            if (defender.GetDefenderCost() > 0)
-            {
-                mouseDefender.GetComponent<Animator>().enabled = false;
-                if (mouseDefender.GetComponent<Shooter>())
-                {
-                    mouseDefender.GetComponent<Shooter>().enabled = false;
-                }
-            }
+    //        // Disable some unwanted behaviour
+    //        if (defender.GetDefenderCost() > 0)
+    //        {
+    //            mouseDefender.GetComponent<Animator>().enabled = false;
+    //            if (mouseDefender.GetComponent<Shooter>())
+    //            {
+    //                mouseDefender.GetComponent<Shooter>().enabled = false;
+    //            }
+    //        }
 
-            var boxColliders = mouseDefender.GetComponentsInChildren<BoxCollider2D>();
-            foreach(var boxCollider in boxColliders)
-            {
-                boxCollider.enabled = false;
-            }
+    //        var boxColliders = mouseDefender.GetComponentsInChildren<BoxCollider2D>();
+    //        foreach(var boxCollider in boxColliders)
+    //        {
+    //            boxCollider.enabled = false;
+    //        }
 
-            var spriteRenderers = mouseDefender.GetComponentsInChildren<SpriteRenderer>();
-            foreach(var spriteRenderer in spriteRenderers)
-            {
-                spriteRenderer.sortingLayerName = "MouseDefender";
-            }
-        }
-    }
+    //        var spriteRenderers = mouseDefender.GetComponentsInChildren<SpriteRenderer>();
+    //        foreach(var spriteRenderer in spriteRenderers)
+    //        {
+    //            spriteRenderer.sortingLayerName = "MouseDefender";
+    //        }
+    //    }
+    //}
 
-    public void DestroyMouseDefender()
-    {
-        GameObject.Destroy(mouseDefender.gameObject);
-    }
+    //public void DestroyMouseDefender()
+    //{
+    //    GameObject.Destroy(mouseDefender.gameObject);
+    //}
 
     public void SpawnDefender()
     {
@@ -111,9 +114,12 @@ public class DefenderSpawner : MonoBehaviour
             candiesDisplay.DeceaseCandies(defender.GetDefenderCost());
             Defender myDefender = Instantiate(defender, GetSquareClicked(), transform.rotation) as Defender;
             myDefender.transform.parent = defenderParent.transform;
-            defender = null;
 
-            GameObject.Destroy(mouseDefender.gameObject);
+
+            //FindObjectOfType<DefenderButton>().DeselectDefenderButtons();
+            //defender = null;
+
+            //GameObject.Destroy(mouseDefender.gameObject);
         }
     }
 }
