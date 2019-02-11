@@ -35,7 +35,7 @@ public class DefenderSpawner : MonoBehaviour
     private void CreateDefendersParent()
     {
         defenderParent = GameObject.Find(DEFENDER_PARENT_NAME);
-        if(!defenderParent)
+        if (!defenderParent)
         {
             defenderParent = new GameObject(DEFENDER_PARENT_NAME);
         }
@@ -120,6 +120,13 @@ public class DefenderSpawner : MonoBehaviour
             //defender = null;
 
             //GameObject.Destroy(mouseDefender.gameObject);
+        }
+
+        if (candiesDisplay.GetCandiesToSpend() < defender.GetDefenderCost() || defender.GetDefenderCost() == 0)
+        {
+            defender = null;
+            FindObjectOfType<DefenderButton>().DeselectDefenderButtons();
+            
         }
     }
 }

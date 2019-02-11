@@ -47,12 +47,6 @@ public class DefenderButton : MonoBehaviour
         else
         {
             sprite.color = Color.grey;
-
-            if (defenderSpawner.defender && defenderSpawner.defender.GetDefenderCost() > 0)
-            {
-                DeselectDefenderButton();
-                defenderSpawner.ResetSelectedDefender();
-            }
         }
     }
     private void OnMouseDown()
