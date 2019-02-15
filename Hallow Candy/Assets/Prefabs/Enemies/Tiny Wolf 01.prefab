@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b17c7deb362638c49ae945150248dde3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 90
 --- !u!114 &1292477056088250122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -492,6 +492,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 38d15b4a4b76ce342939ef239d160eef, type: 3}
   attackSounds:
   - {fileID: 8300000, guid: 70db9754f3f1a0048902d9fc76754343, type: 3}
+  specialSounds: []
 --- !u!1 &1235002952879422
 GameObject:
   m_ObjectHideFlags: 0

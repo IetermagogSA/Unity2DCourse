@@ -831,7 +831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808440128d9ecdd4b8fa7bb52a67dea1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageDealt: 40
+  damageDealt: 25
 --- !u!50 &6799753331811258409
 Rigidbody2D:
   serializedVersion: 4
@@ -914,6 +914,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 30d2b9681c510c84ca6d13840481abbe, type: 3}
   - {fileID: 8300000, guid: 8a0b208477b2de3479c3770ad0574fc6, type: 3}
   - {fileID: 8300000, guid: 773e6a791afe6574aacfe1c53c29bf64, type: 3}
+  specialSounds: []
 --- !u!82 &3320568595361835476
 AudioSource:
   m_ObjectHideFlags: 0

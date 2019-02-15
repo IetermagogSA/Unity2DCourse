@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpeed: 2
-  projectileDamage: 50
+  projectileDamage: 25
 --- !u!50 &4928986928675016703
 Rigidbody2D:
   serializedVersion: 4
