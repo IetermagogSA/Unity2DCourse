@@ -13,6 +13,8 @@ public class EnemySpawner : MonoBehaviour
 
     IEnumerator Start()
     {
+        yield return new WaitForSeconds(FindObjectOfType<LevelController>().enemySpawnersDelay);
+
         while(!stopSpawning)
         {
             yield return new WaitForSeconds(Random.Range(minSpawnRate, maxSpawnRate));

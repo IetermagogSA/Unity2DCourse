@@ -46,6 +46,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelCompleteCanvas: {fileID: 0}
   gameOverCanvas: {fileID: 0}
+  pauseCanvas: {fileID: 0}
+  levelMusic: {fileID: 8300000, guid: 33e0f066da43cf343be48ff34722c182, type: 3}
+  enemySpawnersDelay: 15
   isLevelTimerFinished: 0
   enemyCount: 0
 --- !u!114 &608026759

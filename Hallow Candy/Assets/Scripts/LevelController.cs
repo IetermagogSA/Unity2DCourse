@@ -8,6 +8,7 @@ public class LevelController : MonoBehaviour
     [SerializeField] GameObject gameOverCanvas;
     [SerializeField] GameObject pauseCanvas;
     [SerializeField] public AudioClip levelMusic;
+    [SerializeField] public float enemySpawnersDelay = 5f;
 
     public bool isLevelTimerFinished = false;
     public int enemyCount = 0;
