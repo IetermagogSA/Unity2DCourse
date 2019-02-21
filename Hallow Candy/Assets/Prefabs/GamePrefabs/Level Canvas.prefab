@@ -939,6 +939,7 @@ GameObject:
   - component: {fileID: 4660651180756787651}
   - component: {fileID: 8346180054883867298}
   - component: {fileID: 1577132814396452854}
+  - component: {fileID: 563925640}
   m_Layer: 5
   m_Name: Candies Display
   m_TagString: Untagged
@@ -962,8 +963,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -557.7, y: -507}
-  m_SizeDelta: {x: 306.8, y: 105.7}
+  m_AnchoredPosition: {x: -584.60004, y: -495.8}
+  m_SizeDelta: {x: 360.6, y: 128.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4660651180756787651
 CanvasRenderer:
@@ -1040,7 +1041,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 0
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1060,7 +1061,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0.00009540084, y: 0, z: -5.087387, w: 0}
   m_textInfo:
     textComponent: {fileID: 8346180054883867298}
     characterCount: 4
@@ -1102,6 +1103,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   candies: 50
+--- !u!95 &563925640
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8409572973134379369}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5d26aad4fd69b054384dfc3a3fa21b72, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &371863011373760128
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1430,18 +1450,6 @@ PrefabInstance:
       objectReference: {fileID: 8032270550626938520}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dae7c088eeaf3614fa3d14af9c9386fc, type: 3}
---- !u!224 &8491194541541253699 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7331023049881972260, guid: dae7c088eeaf3614fa3d14af9c9386fc,
-    type: 3}
-  m_PrefabInstance: {fileID: 1183266845074328679}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &3818886325819063288 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 2635914254253668255, guid: dae7c088eeaf3614fa3d14af9c9386fc,
-    type: 3}
-  m_PrefabInstance: {fileID: 1183266845074328679}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &6720220514776660626 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5559915973754566389, guid: dae7c088eeaf3614fa3d14af9c9386fc,
@@ -1484,6 +1492,18 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &8491194541541253699 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7331023049881972260, guid: dae7c088eeaf3614fa3d14af9c9386fc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1183266845074328679}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &3818886325819063288 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2635914254253668255, guid: dae7c088eeaf3614fa3d14af9c9386fc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1183266845074328679}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7680830630502466340 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8861962763852648259, guid: dae7c088eeaf3614fa3d14af9c9386fc,

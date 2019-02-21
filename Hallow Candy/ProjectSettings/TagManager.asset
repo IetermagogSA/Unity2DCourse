@@ -8,6 +8,7 @@ TagManager:
   - Projectile
   - Defender
   - BloodyDefenderSelector
+  - CurrencyCandy
   layers:
   - Default
   - TransparentFX

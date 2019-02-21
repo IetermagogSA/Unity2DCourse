@@ -22,7 +22,7 @@ public class CharacterSoundController : MonoBehaviour
     private void Start()
     {
         audiosource = GetComponent<AudioSource>();
-        audiosource.volume = PlayerPrefsController.GetMasterVolume();
+        audiosource.volume = PlayerPrefsController.GetMasterVolume() * 0.4f;
     }
 
     public void PlaySpawningSound()

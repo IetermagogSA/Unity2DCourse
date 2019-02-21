@@ -25,6 +25,7 @@ public class CandiesDisplay : MonoBehaviour
     {
         candies += amountToAdd;
         UpdateCandiesDisplay();
+        PopUpText();
     }
 
     public void DeceaseCandies(int amountToDecrease)
@@ -39,5 +40,10 @@ public class CandiesDisplay : MonoBehaviour
     public int GetCandiesToSpend()
     {
         return candies;
+    }
+
+    public void PopUpText()
+    {
+        GetComponent<Animator>().SetTrigger("popupTrigger");
     }
 }
