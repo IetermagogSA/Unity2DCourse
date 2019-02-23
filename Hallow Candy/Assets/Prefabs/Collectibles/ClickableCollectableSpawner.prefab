@@ -45,10 +45,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clickableCollectables:
   - {fileID: 3186457824734900698, guid: 591598cfd7da06148a8a3f4511fe0ce7, type: 3}
-  - {fileID: 2092403896389915953, guid: e8a3f0c2f74b5594093c91f963303856, type: 3}
+  - {fileID: 2092403896389915953, guid: 3c6871788d15dc54ea13ec1ea1852764, type: 3}
   minSpawnDelay: 10
   maxSpawnDelay: 25
   minXSpawnLocation: 1
   maxXSpawnLocation: 10
-  minYSpawnLocation: 1
-  maxYSpawnLocation: 5
+  minYSpawnLocation: 6
+  maxYSpawnLocation: 8

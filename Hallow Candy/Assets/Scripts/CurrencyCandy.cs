@@ -7,14 +7,29 @@ public class CurrencyCandy : MonoBehaviour
     [SerializeField] int candyValue = 10;
     [SerializeField] float idleTime = 8f;
     [SerializeField] float collectSpeed = 1f;
+    [SerializeField] float fallingSpeed = 0.008f;
+    [SerializeField] bool fallingCandy = false;
 
     private Animator animator;
     bool moveToScore = false;
+    Vector3 randomDropPos;
 
     private void Awake()
     {
         animator = GetComponentInParent<Animator>();
+
+        if (!fallingCandy)
+        {
+            PlayPopupAnimation();
+        }
         StartCoroutine(DestroyIdleCandy());
+
+        randomDropPos = new Vector3(transform.position.x, Random.Range(1f, 5f));
+    }
+
+    public void PlayPopupAnimation()
+    {
+        animator.SetTrigger("popupTrigger");
     }
 
     private void Update()
@@ -23,11 +38,24 @@ public class CurrencyCandy : MonoBehaviour
         {
             MoveToScore();
         }
+        else if(fallingCandy)
+        {
+            Fall();
+        }
+    }
+
+    private void Fall()
+    {
+        var movementThisFrame = fallingSpeed * Time.deltaTime;
+
+        transform.parent.position = Vector2.MoveTowards(transform.position, randomDropPos, fallingSpeed);
     }
 
     public void CandyClicked()
     {
         FindObjectOfType<CandiesDisplay>().AddCandies(candyValue);
+
+        GetComponent<BoxCollider2D>().enabled = false;
 
         animator.SetTrigger("clickedTrigger");
 

@@ -10,8 +10,8 @@ public class ClickableCollectableSpawner : MonoBehaviour
 
     [SerializeField] float minXSpawnLocation = 1f;
     [SerializeField] float maxXSpawnLocation = 10f;
-    [SerializeField] float minYSpawnLocation = 1f;
-    [SerializeField] float maxYSpawnLocation = 5f;
+    [SerializeField] float minYSpawnLocation = 7f;
+    [SerializeField] float maxYSpawnLocation = 10f;
 
     float randomSpawnTime = 0f;
     float elapsedTime = 0f;
@@ -36,7 +36,10 @@ public class ClickableCollectableSpawner : MonoBehaviour
         spawnPos = new Vector3(Random.Range(minXSpawnLocation, maxXSpawnLocation), Random.Range(minYSpawnLocation, maxYSpawnLocation), 0f);
         //spawnPos = Camera.main.ScreenToWorldPoint(spawnPos);
 
-        Instantiate(clickableCollectables[Random.Range(0, clickableCollectables.Length)], spawnPos, Quaternion.identity);
+        GameObject objectToSpawn = clickableCollectables[Random.Range(0, clickableCollectables.Length)];
+
+        Instantiate(objectToSpawn, spawnPos, Quaternion.identity);
+
         elapsedTime = 0;
         randomSpawnTime = Random.Range(minSpawnDelay, maxSpawnDelay);
     }
