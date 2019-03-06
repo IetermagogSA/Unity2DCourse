@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clickableCollectables:
+  - {fileID: 5045391151982816490, guid: 8c9bbc4b3c293954992923a0128679bf, type: 3}
   - {fileID: 3186457824734900698, guid: 591598cfd7da06148a8a3f4511fe0ce7, type: 3}
   - {fileID: 2092403896389915953, guid: 3c6871788d15dc54ea13ec1ea1852764, type: 3}
   minSpawnDelay: 10

@@ -50,4 +50,9 @@ public class CameraShake : MonoBehaviour
 
         cameraTransform.position = originalPosition;
     }
+
+    private void OnDestroy()
+    {
+        cameraTransform.position = originalPosition;
+    }
 }

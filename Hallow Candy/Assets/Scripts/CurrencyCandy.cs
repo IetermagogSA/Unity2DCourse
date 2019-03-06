@@ -7,7 +7,7 @@ public class CurrencyCandy : MonoBehaviour
     [SerializeField] int candyValue = 10;
     [SerializeField] float idleTime = 8f;
     [SerializeField] float collectSpeed = 1f;
-    [SerializeField] float fallingSpeed = 0.008f;
+    [SerializeField] float fallingSpeed = 1.5f;
     [SerializeField] bool fallingCandy = false;
 
     private Animator animator;
@@ -48,7 +48,7 @@ public class CurrencyCandy : MonoBehaviour
     {
         var movementThisFrame = fallingSpeed * Time.deltaTime;
 
-        transform.parent.position = Vector2.MoveTowards(transform.position, randomDropPos, fallingSpeed);
+        transform.parent.position = Vector2.MoveTowards(transform.position, randomDropPos, movementThisFrame);
     }
 
     public void CandyClicked()
