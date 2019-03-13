@@ -996,31 +996,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1192602653}
-    - target: {fileID: 7660597735958155318, guid: e9efb3caeb903fb4ab6414e4e8a0fa15,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PauseGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 7660597735958155318, guid: e9efb3caeb903fb4ab6414e4e8a0fa15,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 2306654999044924780, guid: e9efb3caeb903fb4ab6414e4e8a0fa15,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 608026759}
-    - target: {fileID: 2306654999044924780, guid: e9efb3caeb903fb4ab6414e4e8a0fa15,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadMainMenuNoWait
-      objectReference: {fileID: 0}
-    - target: {fileID: 2306654999044924780, guid: e9efb3caeb903fb4ab6414e4e8a0fa15,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9efb3caeb903fb4ab6414e4e8a0fa15, type: 3}
 --- !u!1001 &3037929335010163168
@@ -1687,7 +1667,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 608026759}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6168480502981681743, guid: c6eebde46a749ba4f86af388821532e9, type: 3}
+    - {fileID: 6168480501839798618, guid: c6eebde46a749ba4f86af388821532e9, type: 3}
+    - {fileID: 6168480503037241328, guid: c6eebde46a749ba4f86af388821532e9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c6eebde46a749ba4f86af388821532e9, type: 3}
 --- !u!1001 &6880392620816210962
 PrefabInstance:
