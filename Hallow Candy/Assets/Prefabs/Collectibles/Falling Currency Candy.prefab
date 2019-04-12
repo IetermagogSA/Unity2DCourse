@@ -97,7 +97,7 @@ MonoBehaviour:
   candyValue: 25
   idleTime: 8
   collectSpeed: 0.5
-  fallingSpeed: 0.03
+  fallingSpeed: 0.5
   fallingCandy: 1
 --- !u!61 &19981242265448127
 BoxCollider2D:

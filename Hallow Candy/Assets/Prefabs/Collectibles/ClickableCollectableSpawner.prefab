@@ -51,5 +51,5 @@ MonoBehaviour:
   maxSpawnDelay: 25
   minXSpawnLocation: 1
   maxXSpawnLocation: 10
-  minYSpawnLocation: 6
-  maxYSpawnLocation: 8
+  minYSpawnLocation: 7
+  maxYSpawnLocation: 10

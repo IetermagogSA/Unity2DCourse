@@ -7,16 +7,19 @@ public class CurrencyCandy : MonoBehaviour
     [SerializeField] int candyValue = 10;
     [SerializeField] float idleTime = 8f;
     [SerializeField] float collectSpeed = 1f;
-    [SerializeField] float fallingSpeed = 1.5f;
+    [SerializeField] float minFallingSpeed = 0.8f;
+    [SerializeField] float maxFallingSpeed = 1.5f;
     [SerializeField] bool fallingCandy = false;
 
     private Animator animator;
     bool moveToScore = false;
     Vector3 randomDropPos;
+    float fallingSpeed;
 
     private void Awake()
     {
         animator = GetComponentInParent<Animator>();
+        fallingSpeed = Random.Range(minFallingSpeed, maxFallingSpeed);
 
         if (!fallingCandy)
         {
