@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class DefenderSpawner : MonoBehaviour
 {
-    [SerializeField] float offSet = 0.5f;
+    [SerializeField] float offSet = 0.25f;
 
     public Defender defender;
-    //public Defender mouseDefender;
     CandiesDisplay candiesDisplay;
 
     GameObject defenderParent;
@@ -18,19 +17,8 @@ public class DefenderSpawner : MonoBehaviour
     {
         candiesDisplay = FindObjectOfType<CandiesDisplay>();
 
-        CreateDefendersParent();
+        //CreateDefendersParent();
     }
-
-    //private void Update()
-    //{
-    //    if(mouseDefender)
-    //    {
-    //        Vector2 mousePos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-    //        Vector2 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
-
-    //        mouseDefender.transform.position = worldPos;
-    //    }
-    //}
 
     private void CreateDefendersParent()
     {
@@ -38,6 +26,7 @@ public class DefenderSpawner : MonoBehaviour
         if (!defenderParent)
         {
             defenderParent = new GameObject(DEFENDER_PARENT_NAME);
+            defenderParent.transform.position = new Vector2(0.2f, 0f);
         }
     }
 
@@ -63,6 +52,9 @@ public class DefenderSpawner : MonoBehaviour
 
         worldPos.x = Mathf.RoundToInt(worldPos.x);
         worldPos.y = Mathf.RoundToInt(worldPos.y) - offSet; // 0.25f is a small offset so that it looks good
+
+        //worldPos.x = 1;
+        //worldPos.y = 0.7f;
 
         return worldPos;
     }
@@ -107,26 +99,36 @@ public class DefenderSpawner : MonoBehaviour
     //    GameObject.Destroy(mouseDefender.gameObject);
     //}
 
-    public void SpawnDefender()
+    public void SpawnDefender(GameObject parentObject)
     {
         if (defender && defender.GetDefenderCost() > 0)
         {
             candiesDisplay.DeceaseCandies(defender.GetDefenderCost());
-            Defender myDefender = Instantiate(defender, GetSquareClicked(), transform.rotation) as Defender;
-            myDefender.transform.parent = defenderParent.transform;
+            Defender myDefender = Instantiate(defender, new Vector2(parentObject.transform.position.x, parentObject.transform.position.y - offSet), transform.rotation) as Defender;
+
+            float screenHeight = Screen.height;
+            float screenWidth = Screen.width;
+            int DEVICE_ASPECT_RATIO = Mathf.FloorToInt(screenWidth / screenHeight);
+
+            float newScaleX = DEVICE_ASPECT_RATIO > 1 ? myDefender.transform.localScale.x * (1 + (float)DEVICE_ASPECT_RATIO / 10) : myDefender.transform.localScale.x;
+            myDefender.transform.localScale = new Vector3(newScaleX, myDefender.transform.localScale.y, 1f);
+
+            myDefender.transform.parent = parentObject.transform;
 
 
-            //FindObjectOfType<DefenderButton>().DeselectDefenderButtons();
-            //defender = null;
+            FindObjectOfType<DefenderButton>().DeselectDefenderButtons();
+            defender = null;
 
             //GameObject.Destroy(mouseDefender.gameObject);
         }
-
-        if (candiesDisplay.GetCandiesToSpend() < defender.GetDefenderCost() || defender.GetDefenderCost() == 0)
+        else
         {
-            defender = null;
-            FindObjectOfType<DefenderButton>().DeselectDefenderButtons();
-            
+            if (candiesDisplay.GetCandiesToSpend() < defender.GetDefenderCost() || defender.GetDefenderCost() == 0)
+            {
+                defender = null;
+                FindObjectOfType<DefenderButton>().DeselectDefenderButtons();
+
+            }
         }
     }
 }

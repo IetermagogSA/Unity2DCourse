@@ -1234,7 +1234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d11e3ae99373e67478de2ca9439d880a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defender: {fileID: 2926388168985188381, guid: 0d79fc506aa58314d8cef757d5ae9035,
+  defender: {fileID: 2926388168985188381, guid: fdf27cab6dcaaa348a1763cb94d4684a,
     type: 3}
   bloodySelector: {fileID: 2738274985677730253}
 --- !u!1 &4265062866226915894
@@ -1416,7 +1416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d11e3ae99373e67478de2ca9439d880a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defender: {fileID: 2767125412411881244, guid: dca120e395d5a4e4ba378f4d4db0530a,
+  defender: {fileID: 2767125412411881244, guid: 975c0ad6fd7ceee4c84c6eaf5c0f88d9,
     type: 3}
   bloodySelector: {fileID: 2040125760033129097}
 --- !u!1 &5373886338798020229

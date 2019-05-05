@@ -35,7 +35,7 @@ public class ClickManager : MonoBehaviour
                     if (Physics2D.Raycast(mousePos2D, Vector3.forward, Mathf.Infinity, layerMask))
                     {
                         // Do not allow spawning
-                        // Destroy the defender if the scytche has been selected
+                        // Destroy the defender if the scythe has been selected
                         Defender defender = FindObjectOfType<DefenderSpawner>().GetSelectedDefender();
                         if (defender)
                         {
@@ -68,7 +68,7 @@ public class ClickManager : MonoBehaviour
                             RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero, Mathf.Infinity, layerMask);
                             if (FindObjectOfType<DefenderSpawner>().GetSelectedDefender())
                             {
-                                FindObjectOfType<DefenderSpawner>().SpawnDefender();
+                                FindObjectOfType<DefenderSpawner>().SpawnDefender(hit.transform.gameObject);
                             }
                         }
                     }
