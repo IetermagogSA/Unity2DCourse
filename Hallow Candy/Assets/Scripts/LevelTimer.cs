@@ -9,12 +9,13 @@ public class LevelTimer : MonoBehaviour
     [SerializeField] float levelTimeInSeconds = 60;
 
     private bool hasSetSpawnRate = false;
-
     Slider levelTimerSlider;
+
     private void Start()
     {
         levelTimerSlider = GetComponent<Slider>();
     }
+
     void Update()
     {
         levelTimerSlider.value = (Time.timeSinceLevelLoad / levelTimeInSeconds) * 100;
@@ -33,7 +34,7 @@ public class LevelTimer : MonoBehaviour
 
         bool levelTimerFinished = (Time.timeSinceLevelLoad > levelTimeInSeconds);
 
-        if(levelTimerFinished)
+        if (levelTimerFinished)
         {
             FindObjectOfType<LevelController>().SetLevelTimerFinished();
         }

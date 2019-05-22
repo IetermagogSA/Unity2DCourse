@@ -10,8 +10,10 @@ public class LevelController : MonoBehaviour
     [SerializeField] public AudioClip levelMusic;
     [SerializeField] public float enemySpawnersDelay = 5f;
 
+    public bool hasGameStarted = false;
     public bool isLevelTimerFinished = false;
     public int enemyCount = 0;
+    LevelTimer levelTimer;
 
 
     private void Start()
@@ -21,6 +23,7 @@ public class LevelController : MonoBehaviour
         gameOverCanvas.SetActive(false);
         pauseCanvas.SetActive(false);
         StartLevelMusic();
+        levelTimer = FindObjectOfType<LevelTimer>();
     }
 
     public void StartLevelMusic()
@@ -49,7 +52,7 @@ public class LevelController : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            PauseGame();
+            PauseGame(true);
         }
     }
 
@@ -97,9 +100,13 @@ public class LevelController : MonoBehaviour
         Time.timeScale = 0;
     }
 
-    public void PauseGame()
+    public void PauseGame(bool showPauseCanvas)
     {
-        pauseCanvas.SetActive(true);
+        if (showPauseCanvas)
+        {
+            pauseCanvas.SetActive(true);
+        }
+
         Time.timeScale = 0;
     }
 
